@@ -14,6 +14,12 @@
                     $('.form-block-{/literal}{$page_id}{literal} form').addClass('cm-ajax');
                     $('.form-block-{/literal}{$page_id}{literal} form').prepend('<input type="hidden" name="fb_ajax" value="1"/>');
                     $('.form-block-{/literal}{$page_id}{literal} form').attr('name', 'forms_form_{/literal}{$page_id}{literal}');
+                    $('.form-block-{/literal}{$page_id}{literal} form').on('submit', function () {
+                        var $t = $(this).find('input[name="fb_source_page_title"]');
+                        if ($t.length && !$.trim($t.val())) {
+                            $t.val((typeof document !== 'undefined' && document.title) ? document.title : '');
+                        }
+                    });
                 })(Tygh, Tygh.$);
                 $.ceEvent('on', 'ce.formajaxpost_forms_form_{/literal}{$page_id}{literal}', function (data, params) {
                     var is_send = false;

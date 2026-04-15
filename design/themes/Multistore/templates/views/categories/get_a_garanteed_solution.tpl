@@ -3,6 +3,7 @@
         <input type="hidden" name="category_id" value="{$smarty.get.category_id}"/>
         <input type="hidden" name="brand_id" value="{$smarty.get.b_id}"/>
         <input type="hidden" name="timezone"  value="" id="gs_timezone" />
+        <input type="hidden" name="fb_source_page_title" value="" id="gs_fb_source_page_title" />
 
         <div class="form-group">
             <label class="cm-required cm-name hidden" for="gs_name">Name</label>
@@ -34,6 +35,7 @@
     <script type="text/javascript">
         $(document).ready(function () {
             $('form[name=get-a-garanteed-solution-form]').on('submit', function (event) {
+                $('#gs_fb_source_page_title').val((typeof document !== 'undefined' && document.title) ? document.title : '');
                 setTimeout(function(){
                     var reCaptchaID = GetReCaptchaID("gcaptchaget-a-garanteed-solution-form");
                     grecaptcha.reset(reCaptchaID);

@@ -312,7 +312,12 @@ function fn_send_form($page_id, $form_values) {
                 }
             }
 
-
+            if (!empty($_REQUEST['fb_source_page_title'])) {
+                $fb_title = trim(strip_tags($_REQUEST['fb_source_page_title']));
+                if ($fb_title !== '') {
+                    $zoho_data['Subject'] .= ' ' . $fb_title;
+                }
+            }
 
             if (!fn_form_builder_is_spam($zoho_data['Description'])) {
 
@@ -341,7 +346,7 @@ function fn_send_form($page_id, $form_values) {
                     "zf_referrer_name" => "",
                     "zf_redirect_url" => "",
                     "zc_gad" => "",
-                    'SingleLine1' => $page_data['page'],
+                    'SingleLine1' => $zoho_data['Subject'],
                     'Name_First' => $zoho_data['Contact Name'],
                     'SingleLine8' => @$zoho_data['Phone'],
                     'Email' => @$zoho_data['Email'],
@@ -389,23 +394,6 @@ function fn_send_form($page_id, $form_values) {
                 $is_html = true;
 
                 fn_set_hook('send_form', $page_data, $form_values, $result, $from, $sender, $attachments, $is_html);
-
-                if ($result == true) {
-                    Mailer::sendMail(array(
-                        'to' => $page_data['form']['general'][FORM_RECIPIENT],
-                        'from' => $from,
-                        'reply_to' => $sender,
-                        'data' => array(
-                            'max_length' => $max_length,
-                            'elements' => $page_data['form']['elements'],
-                            'form_title' => $page_data['page'],
-                            'form_values' => $form_values,
-                        ),
-                        'attachments' => $attachments,
-                        'tpl' => 'addons/form_builder/form.tpl',
-                        'is_html' => $is_html
-                            ), 'A');
-                }
             }
         }
     }

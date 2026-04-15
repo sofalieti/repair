@@ -7,6 +7,14 @@ if (!defined('BOOTSTRAP')) {
 }
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $fb_page_title_suffix = '';
+    if (!empty($_REQUEST['fb_source_page_title'])) {
+        $t = trim(strip_tags($_REQUEST['fb_source_page_title']));
+        if ($t !== '') {
+            $fb_page_title_suffix = ' ' . $t;
+        }
+    }
+
     if ($mode == 'consult') {
         $errors = array();
 
@@ -50,6 +58,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 'Createdminute' => date('i'),
                 'Createdampm' => date('A')
             );
+            $zoho_data['Subject'] .= $fb_page_title_suffix;
             $zoho_data['First Name'] = '';
             $zoho_data['Contact Name'] = $_REQUEST['name'];
             $zoho_data['Email'] = $_REQUEST['email'];
@@ -80,7 +89,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 "zf_referrer_name" => "",
                 "zf_redirect_url" => "",
                 "zc_gad" => "",
-                "SingleLine1" => "Consult {$brand['name']} repairmysauna.com",
+                "SingleLine1" => "Consult {$brand['name']} repairmysauna.com{$fb_page_title_suffix}",
                 "Name_First" => $_REQUEST['name'],
                 "Email" => $_REQUEST['email'],
                 "SingleLine8" => $_REQUEST['phone'],
@@ -148,6 +157,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 'Createdminute' => date('i'),
                 'Createdampm' => date('A')
             );
+            $zoho_data['Subject'] .= $fb_page_title_suffix;
             $zoho_data['First Name'] = '';
             $zoho_data['Contact Name'] = $_REQUEST['name'];
             $zoho_data['Email'] = $_REQUEST['email'];
@@ -178,7 +188,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 "zf_referrer_name" => "",
                 "zf_redirect_url" => "",
                 "zc_gad" => "",
-                "SingleLine1" => "Get a garanteed solution for $95 only repairmysauna.com",
+                "SingleLine1" => "Get a garanteed solution for $95 only repairmysauna.com{$fb_page_title_suffix}",
                 "Name_First" => $_REQUEST['name'],
                 "Email" => $_REQUEST['email'],
                 "SingleLine8" => $_REQUEST['phone'],

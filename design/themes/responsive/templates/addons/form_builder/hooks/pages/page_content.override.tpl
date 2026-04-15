@@ -19,6 +19,7 @@
     <form action="{""|fn_url}" method="post" name="forms_form" enctype="multipart/form-data">
     <input type="hidden" name="fake" value="1" />
     <input type="hidden" name="page_id" value="{$page.page_id}" />
+    <input type="hidden" name="fb_source_page_title" value="{if $page_title}{$page_title|escape:'html'}{elseif $location_data.title}{$location_data.title|escape:'html'}{/if}" />
 
     {foreach from=$page.form.elements key="element_id" item="element" name="form_lements"}
 

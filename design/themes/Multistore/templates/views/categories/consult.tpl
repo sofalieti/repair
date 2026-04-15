@@ -3,6 +3,7 @@
         <input type="hidden" name="category_id" value="{$smarty.get.category_id}"/>
         <input type="hidden" name="brand_id" value="{$smarty.get.b_id}"/>
         <input type="hidden" name="timezone"  value="" id="consult_timezone" />
+        <input type="hidden" name="fb_source_page_title" value="" id="consult_fb_source_page_title" />
         <input type="hidden" name="result_ids" value="result" />
 
         <div class="form-group">
@@ -36,6 +37,7 @@
     <script type="text/javascript"  class="cm-ajax-force">
         $(document).ready(function () {
             $('form[name=form_consult]').on('submit', function (event) {
+                $('#consult_fb_source_page_title').val((typeof document !== 'undefined' && document.title) ? document.title : '');
                 setTimeout(function(){
                     var reCaptchaID = GetReCaptchaID("gcaptchaform_consult");
                     grecaptcha.reset(reCaptchaID);
