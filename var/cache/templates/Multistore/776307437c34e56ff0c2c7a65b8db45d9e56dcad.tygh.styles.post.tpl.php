@@ -1,0 +1,47 @@
+<?php /* Smarty version Smarty-3.1.21, created on 2025-07-21 11:11:28
+         compiled from "/var/www/www-root/data/www/repairmysauna.com/design/themes/Multistore/templates/addons/twigmo/hooks/index/styles.post.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:966488077687df6301e74e8-23308399%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '776307437c34e56ff0c2c7a65b8db45d9e56dcad' => 
+    array (
+      0 => '/var/www/www-root/data/www/repairmysauna.com/design/themes/Multistore/templates/addons/twigmo/hooks/index/styles.post.tpl',
+      1 => 1752993084,
+      2 => 'tygh',
+    ),
+  ),
+  'nocache_hash' => '966488077687df6301e74e8-23308399',
+  'function' => 
+  array (
+  ),
+  'variables' => 
+  array (
+    'runtime' => 0,
+    'auth' => 0,
+  ),
+  'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.21',
+  'unifunc' => 'content_687df6301eac65_77460815',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_687df6301eac65_77460815')) {function content_687df6301eac65_77460815($_smarty_tpl) {?><?php if (!is_callable('smarty_function_style')) include '/var/www/www-root/data/www/repairmysauna.com/app/functions/smarty_plugins/function.style.php';
+if (!is_callable('smarty_function_set_id')) include '/var/www/www-root/data/www/repairmysauna.com/app/functions/smarty_plugins/function.set_id.php';
+?><?php if ($_smarty_tpl->tpl_vars['runtime']->value['customization_mode']['design']=="Y"&&@constant('AREA')=="C") {
+$_smarty_tpl->_capture_stack[0][] = array("template_content", null, null); ob_start();
+echo smarty_function_style(array('src'=>"addons/twigmo/styles.css"),$_smarty_tpl);
+list($_capture_buffer, $_capture_assign, $_capture_append) = array_pop($_smarty_tpl->_capture_stack[0]);
+if (!empty($_capture_buffer)) {
+ if (isset($_capture_assign)) $_smarty_tpl->assign($_capture_assign, ob_get_contents());
+ if (isset( $_capture_append)) $_smarty_tpl->append( $_capture_append, ob_get_contents());
+ Smarty::$_smarty_vars['capture'][$_capture_buffer]=ob_get_clean();
+} else $_smarty_tpl->capture_error();
+if (trim(Smarty::$_smarty_vars['capture']['template_content'])) {
+if ($_smarty_tpl->tpl_vars['auth']->value['area']=="A") {?><span class="cm-template-box template-box" data-ca-te-template="addons/twigmo/hooks/index/styles.post.tpl" id="<?php echo smarty_function_set_id(array('name'=>"addons/twigmo/hooks/index/styles.post.tpl"),$_smarty_tpl);?>
+"><div class="cm-template-icon icon-edit ty-icon-edit hidden"></div><?php echo Smarty::$_smarty_vars['capture']['template_content'];?>
+<!--[/tpl_id]--></span><?php } else {
+echo Smarty::$_smarty_vars['capture']['template_content'];
+}
+}
+} else {
+echo smarty_function_style(array('src'=>"addons/twigmo/styles.css"),$_smarty_tpl);
+}?><?php }} ?>

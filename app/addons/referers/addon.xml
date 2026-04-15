@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon scheme="2.0">
+	<id>referers</id>
+	<name>Referers</name>
+	<priority>2300</priority>
+	<position>0</position>
+	<status>active</status>     
+	<default_language>en</default_language>	
+	<queries>		
+		<item for="install">
+			CREATE TABLE IF NOT EXISTS `?:referers` (
+			  `referer_id` int(11) NOT NULL AUTO_INCREMENT,
+			  `ip` varchar(20) NOT NULL,
+			  `referer_url` varchar(500) NOT NULL,
+			  `server_url` varchar(500) NOT NULL,
+			  `time` int(11) NOT NULL,
+			  PRIMARY KEY (`referer_id`),
+			  UNIQUE KEY `ip` (`ip`)
+			) ENGINE=InnoDB;
+		</item>
+		<item for="install">
+			CREATE TABLE IF NOT EXISTS `?:referer_sessions` (
+			  `referer_session_id` int(11) NOT NULL AUTO_INCREMENT,
+			  `referer_id` int(11) NOT NULL,
+			  `referer_url` varchar(500) NOT NULL,
+			  `server_url` varchar(500) NOT NULL,
+			  `time` int(11) NOT NULL,
+			  PRIMARY KEY (`referer_session_id`),
+			  KEY `referer_id` (`referer_id`)
+			) ENGINE=InnoDB;
+		</item>
+	</queries>
+	<language_variables>
+		<item lang="en" id="referers">Referers</item>
+	</language_variables>
+</addon>

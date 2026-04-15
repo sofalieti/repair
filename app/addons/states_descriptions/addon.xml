@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon scheme="2.0">
+	<id>states_descriptions</id>
+	<name>States descriptions</name>
+	<priority>9000</priority>
+	<position>0</position>
+	<status>active</status>   
+	<queries>
+		<item>ALTER TABLE  `?:state_descriptions` ADD  `description1` TEXT NOT NULL;</item>
+		<item>ALTER TABLE  `?:state_descriptions` ADD  `description2` TEXT NOT NULL;</item>
+		<item>ALTER TABLE  `?:states` ADD  `url` VARCHAR( 255 ) NOT NULL;</item>
+		
+	</queries>	
+</addon>

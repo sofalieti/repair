@@ -1,0 +1,163 @@
+<?php
+/***************************************************************************
+*                                                                          *
+*   (c) 2004 Vladimir V. Kalynyak, Alexey V. Vinokurov, Ilya M. Shalnev    *
+*                                                                          *
+* This  is  commercial  software,  only  users  who have purchased a valid *
+* license  and  accept  to the terms of the  License Agreement can install *
+* and use this program.                                                    *
+*                                                                          *
+****************************************************************************
+* PLEASE READ THE FULL TEXT  OF THE SOFTWARE  LICENSE   AGREEMENT  IN  THE *
+* "copyright.txt" FILE PROVIDED WITH THIS DISTRIBUTION PACKAGE.            *
+****************************************************************************/
+
+use Tygh\Registry;
+use Tygh\Languages\Languages;
+use Tygh\BlockManager\Block;
+use Tygh\Navigation\LastView;
+
+if (!defined('BOOTSTRAP')) { die('Access denied'); }
+
+function fn_google_recaptcha_captcha_validate($cId, &$sUserCode, $bCaseInsensitive, &$code) {
+    $resp = null;
+    $secret = Registry::get('addons.google_recaptcha.secretkey');
+    if (!empty($secret)) {
+        $reCaptcha = new ReCaptcha($secret);
+        
+        if (!empty($_REQUEST['g-recaptcha-response'])) {        
+            $resp = $reCaptcha->verifyResponse(
+                $_SERVER['REMOTE_ADDR'],
+                $_REQUEST['g-recaptcha-response']
+            );
+            
+            if ($resp != null && $resp->success) {
+                $code = $sUserCode = true;
+            }
+        }
+    }
+    return true;
+}
+
+
+/**
+ * A ReCaptchaResponse is returned from checkAnswer().
+ */
+class ReCaptchaResponse
+{
+    public $success;
+    public $errorCodes;
+}
+
+class ReCaptcha
+{
+    private static $_signupUrl = "https://www.google.com/recaptcha/admin";
+    private static $_siteVerifyUrl =
+        "https://www.google.com/recaptcha/api/siteverify?";
+    private $_secret;
+    private static $_version = "php_1.0";
+
+    /**
+     * Constructor.
+     *
+     * @param string $secret shared secret between site and ReCAPTCHA server.
+     */
+     
+     /* partee3an @ Cart-Power */
+//     function ReCaptcha($secret)
+	public function __construct($secret)
+    /* end partee3an @ Cart-Power */
+    
+    {
+        if ($secret == null || $secret == "") {
+            die("To use reCAPTCHA you must get an API key from <a href='"
+                . self::$_signupUrl . "'>" . self::$_signupUrl . "</a>");
+        }
+        $this->_secret=$secret;
+    }
+
+    /**
+     * Encodes the given data into a query string format.
+     *
+     * @param array $data array of string elements to be encoded.
+     *
+     * @return string - encoded request.
+     */
+    private function _encodeQS($data)
+    {
+        $req = "";
+        foreach ($data as $key => $value) {
+            $req .= $key . '=' . urlencode(stripslashes($value)) . '&';
+        }
+
+        // Cut the last '&'
+        $req=substr($req, 0, strlen($req)-1);
+        return $req;
+    }
+
+    /**
+     * Submits an HTTP GET to a reCAPTCHA server.
+     *
+     * @param string $path url path to recaptcha server.
+     * @param array  $data array of parameters to be sent.
+     *
+     * @return array response
+     */
+    private function _submitHTTPGet($path, $data)
+    {
+        $req = $this->_encodeQS($data);
+        
+        /* partee3an @ Cart-Power */
+//         $response = file_get_contents($path . $req);
+        $ch = curl_init();
+		curl_setopt($ch, CURLOPT_HEADER, 0);
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+		curl_setopt($ch, CURLOPT_URL, $path . $req);
+		$response = curl_exec($ch);
+		curl_close($ch);
+		/* end partee3an @ Cart-Power */
+        
+        return $response;
+    }
+
+    /**
+     * Calls the reCAPTCHA siteverify API to verify whether the user passes
+     * CAPTCHA test.
+     *
+     * @param string $remoteIp   IP address of end user.
+     * @param string $response   response string from recaptcha verification.
+     *
+     * @return ReCaptchaResponse
+     */
+    public function verifyResponse($remoteIp, $response)
+    {
+        // Discard empty solution submissions
+        if ($response == null || strlen($response) == 0) {
+            $recaptchaResponse = new ReCaptchaResponse();
+            $recaptchaResponse->success = false;
+            $recaptchaResponse->errorCodes = 'missing-input';
+            return $recaptchaResponse;
+        }
+
+        $getResponse = $this->_submitHttpGet(
+            self::$_siteVerifyUrl,
+            array (
+                'secret' => $this->_secret,
+                'remoteip' => $remoteIp,
+                'v' => self::$_version,
+                'response' => $response
+            )
+        );
+        $answers = json_decode($getResponse, true);
+        $recaptchaResponse = new ReCaptchaResponse();
+
+        if (trim($answers ['success']) == true) {
+            $recaptchaResponse->success = true;
+        } else {
+            $recaptchaResponse->success = false;
+            $recaptchaResponse->errorCodes = $answers['error-codes'];
+        }
+
+        return $recaptchaResponse;
+    }
+}

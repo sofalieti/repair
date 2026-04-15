@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<addon scheme='3.0' edition_type="ROOT,ULT:VENDOR">
+	<id>google_recaptcha</id>
+	<version>1.0</version> 
+	<priority>100</priority>
+	<default_language>en</default_language>
+	<authors>
+        <author>
+            <name>Cart-Power</name>
+            <email>sales@cart-power.com</email>
+            <url>http://cart-power.com</url>
+        </author>
+    </authors>
+	<tab_order>prepend</tab_order> 
+	<settings  edition_type="ROOT,ULT:VENDOR">
+		<sections>
+			<section id="general">
+				<items>
+                    <item id="licensekey">
+                        <type>input</type>
+                        <default_value></default_value>
+                    </item>
+					<item id="key">
+						<type>input</type>
+						<default_value></default_value>
+					</item>
+					<item id="secretkey">
+						<type>input</type>
+						<default_value></default_value>
+					</item>
+					<item id="theme">
+						<type>selectbox</type>
+						<variants>
+							<item id="light"></item>
+							<item id="dark"></item>
+						</variants>
+						<default_value>light</default_value>
+					</item>
+					<item id="type">
+						<type>selectbox</type>
+						<variants>
+							<item id="image"></item>
+							<item id="audio"></item>
+						</variants>
+						<default_value>image</default_value>
+					</item>	
+				</items>
+			</section>
+		</sections>
+	</settings>    
+</addon>
+

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon scheme="2.0">
+	<id>form_as_block</id>
+	<name>Form as block</name>
+	<priority>2200</priority>
+	<position>0</position>
+	<status>active</status>     
+	<default_language>en</default_language>	
+</addon>

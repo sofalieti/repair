@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<addon scheme='2.0'>
+    <id>domains</id>
+    <version>1.0</version>
+    <name>Multi Domains</name>
+    <description></description>
+    <priority>100500</priority>
+    <status>active</status>
+    <default_language>ru</default_language>
+    <queries>
+        <item for="install">
+            CREATE TABLE IF NOT EXISTS `?:domains` (
+                `domain_id` mediumint(8) unsigned NOT NULL auto_increment,
+                `name` varchar(255) NOT NULL,
+				`default` TINYINT( 1 ) NOT NULL DEFAULT  '0',
+                `ionizer_price` varchar(50) NOT NULL,
+				`chromotherapy_price` varchar(50) NOT NULL,
+				`shipping_price_modificator` varchar(50) NOT NULL,
+                PRIMARY KEY  (`domain_id`)
+            ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+        </item>
+    </queries>
+    <language_variables>
+        <item id="domains" lang="ru">Домены</item>
+        <item id="domains" lang="en">Domains</item>
+        <item id="block_domains" lang="en">List domains</item>
+        <item id="block_domains" lang="ru">Список доменов</item>
+    </language_variables>
+</addon>

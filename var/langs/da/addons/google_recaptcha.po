@@ -1,0 +1,66 @@
+msgid ""
+msgstr "Project-Id-Version: tygh"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language-Team: Danish\n"
+"Language: da_DK\n"
+
+msgctxt "Addons::name::google_recaptcha"
+msgid "Cart-Power: Google recaptcha"
+msgstr "Cart-Power: Google recaptcha"
+
+msgctxt "Addons::description::google_recaptcha"
+msgid "Replace default captcha to google recaptcha. Developed by <a target=\"_blank\" href=\"http://cart-power.com/\">Cart-Power</a>. Professional CS-Cart development."
+msgstr "Replace default captcha to google recaptcha. Developed by <a target=\"_blank\" href=\"http://cart-power.com/\">Cart-Power</a>. Professional CS-Cart development."
+
+msgctxt "SettingsSections::google_recaptcha::elm_Settings"
+msgid "Default settings"
+msgstr "Default settings"
+
+msgctxt "SettingsOptions::google_recaptcha::key"
+msgid "Key"
+msgstr "Key"
+
+msgctxt "SettingsOptions::google_recaptcha::secretkey"
+msgid "Secret Key"
+msgstr "Secret Key"
+
+msgctxt "SettingsTooltips::google_recaptcha::key"
+msgid "Key (<a target=\"_blank\" href=\"https://www.google.com/recaptcha/intro/index.html\">find on this page</a>)"
+msgstr "Key (<a target=\"_blank\" href=\"https://www.google.com/recaptcha/intro/index.html\">find on this page</a>)"
+
+msgctxt "SettingsTooltips::google_recaptcha::secretkey"
+msgid "Secret Key (<a target=\"_blank\" href=\"https://www.google.com/recaptcha/intro/index.html\">find on this page</a>)"
+msgstr "Secret Key (<a target=\"_blank\" href=\"https://www.google.com/recaptcha/intro/index.html\">find on this page</a>)"
+
+msgctxt "SettingsOptions::google_recaptcha::type"
+msgid "The type of CAPTCHA to serve"
+msgstr "The type of CAPTCHA to serve"
+
+msgctxt "SettingsVariants::google_recaptcha::type::image"
+msgid "Image"
+msgstr "Image"
+
+msgctxt "SettingsVariants::google_recaptcha::type::audio"
+msgid "Audio"
+msgstr "Audio"
+
+msgctxt "SettingsOptions::google_recaptcha::theme"
+msgid "Theme"
+msgstr "Theme"
+
+msgctxt "SettingsVariants::google_recaptcha::theme::light"
+msgid "Light"
+msgstr "Light"
+
+msgctxt "SettingsVariants::google_recaptcha::theme::dark"
+msgid "Dark"
+msgstr "Dark"
+
+msgctxt "Languages::cp_your_license_is_not_valid"
+msgid "You should enter valid License Key, please contact us (sales@cart-power.com) if you feel any problems"
+msgstr "You should enter valid License Key, please contact us (sales@cart-power.com) if you feel any problems"
+
+msgctxt "SettingsOptions::google_recaptcha::licensekey"
+msgid "License key"
+msgstr "License key"
+

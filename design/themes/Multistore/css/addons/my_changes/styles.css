@@ -1,0 +1,553 @@
+@charset "utf-8";
+
+
+
+/* CSS Document */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.ty-currencies__active, .ty-currencies__item:hover {
+
+
+
+    background: none repeat scroll 0 0 rgba(255, 255, 255, 0.2) !important;
+
+
+
+}
+
+
+
+
+
+
+
+.ty-sidebox__title {
+
+
+
+	text-align:center;
+
+
+
+	border-radius: 6px;
+
+
+
+	padding: 4px 0 9px !important;
+
+
+
+}
+
+
+
+
+
+
+
+.ty-sidebox {
+
+
+
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0) !important;
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+.ty-sidebox__title-wrapper, .ty-sidebox__title span, .ty-sidebox__title a {
+
+
+
+    color: #FFFFFF !important;
+
+
+
+    font-family: roboto;
+
+
+
+    font-size: 15px !important;
+
+
+
+    font-weight: 500 !important;
+
+
+
+    text-transform: none !important;
+
+
+
+}
+
+
+
+
+
+
+
+.call-support {
+
+
+
+    border-radius: 6px;
+
+
+
+    padding: 3px 20px;
+
+
+
+    text-align: center;
+
+	
+
+	background:@links;
+
+
+
+}
+
+
+
+
+
+
+
+.call-support p {
+
+
+
+	color:#fff;	
+
+
+
+	font-size:15px;
+
+
+
+}
+
+
+
+
+
+
+
+.top-my-account li {
+
+
+
+	padding:7px 14px;	
+
+
+
+}
+
+
+
+
+
+
+
+.homepage-banners .owl-theme .owl-controls {
+
+
+
+    margin-right: 15px;
+
+
+
+    margin-top: -36px !important;
+
+
+
+    position: relative !important;
+
+
+
+    text-align: right !important;
+
+
+
+}
+
+
+
+
+
+
+
+.homepage-on-sale h2 {
+
+
+
+	padding:5px 10px;
+
+
+
+	color:#34495E;	
+
+
+
+}
+
+
+
+
+
+
+
+.level {
+
+
+
+	margin-top:50px;	
+
+
+
+}
+
+
+
+
+
+
+
+.ad-container {
+
+
+
+	margin-bottom:15px;	
+
+
+
+}
+
+
+
+
+
+
+
+h1, h2, h3, h4, h5, h6 {
+
+
+
+	color:#34495E ;
+
+
+
+	
+
+
+
+}
+
+
+
+.subscribe-block p span {
+
+
+
+    color: #FFFFFF;
+
+
+
+    font-family: roboto;
+
+
+
+    font-size: 22px;
+
+
+
+}
+
+
+
+
+
+
+
+.subscribe-block .subscribe-notice {
+
+
+
+	margin-top:0px !important;
+
+
+
+}	
+
+
+
+
+
+
+
+.subscribe-block {
+
+
+
+	margin-bottom:10px;
+
+
+
+	margin-left:10px;	
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+.ty-product-filters__title {
+
+
+
+    font-family: roboto;
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+.white {
+
+
+
+    background: none repeat scroll 0 0 #FFFFFF;
+
+
+
+    border-radius: 10px;
+
+
+
+    padding: 10px;
+
+
+
+	margin-bottom:10px;
+
+
+
+}
+
+
+
+
+
+
+
+.ty-product-switcher__a.disabled, .ty-product-switcher__a.disabled .ty-product-switcher__icon, .ty-product-switcher__a.disabled:hover .ty-product-switcher__icon {
+
+
+
+    color: #34495E !important;
+
+
+
+}
+
+
+
+
+
+
+
+.ty-product-switcher span {
+
+
+
+	color: #34495E !important;
+
+
+
+}
+
+
+
+
+
+
+
+.ty-product-switcher__icon {
+
+
+
+    color: #34495E !important;
+
+
+
+}
+
+
+
+
+
+
+
+.wish-link.text-button {
+
+
+
+    padding: 4px 10px !important;
+
+
+
+}
+
+
+
+
+
+
+
+.recent .ty-sidebox__body {
+
+
+
+    background: none repeat scroll 0 0 #FFFFFF !important;
+
+
+
+    border-radius: 5px !important;
+
+
+
+	padding:20px;
+
+
+
+}
+
+
+
+
+
+
+
+.cart .cm-hint {
+
+
+
+	width:190px;
+
+
+
+}
+
+
+
+
+
+
+
+.buy-this {
+
+
+
+    position: absolute;
+
+
+
+    right: 0;
+
+
+
+    top: 0;
+
+
+
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+
+
+
+	.buy-this {
+
+
+
+		display:none;	
+
+
+
+	}
+
+
+
+}
+
+
+
+.ty-social-link-block {
+
+	margin-top:18px !important;	
+
+}
+
+
+
+.tygh-header > div {
+
+margin-bottom:20px;	
+
+}
+
+.ty-product-detail .ty-product-block__left {
+    padding-right: 150px !important;
+}

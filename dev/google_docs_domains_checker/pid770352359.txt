@@ -1,0 +1,26 @@
+Open doc
+Open sheet DIY sites
+Check domain DIYINFRAREDSAUNA.COM A2
+Clear background row
+Clear text row
+Check domain DIYINFRAREDSAUNAS.COM A3
+Clear background row
+Clear text row
+PHP Fatal error:  Uncaught Google_Service_Exception: {
+  "error": {
+    "code": 429,
+    "message": "Quota exceeded for quota group 'WriteGroup' and limit 'USER-100s' of service 'sheets.googleapis.com' for consumer 'project_number:773598728840'.",
+    "errors": [
+      {
+        "message": "Quota exceeded for quota group 'WriteGroup' and limit 'USER-100s' of service 'sheets.googleapis.com' for consumer 'project_number:773598728840'.",
+        "domain": "global",
+        "reason": "rateLimitExceeded"
+      }
+    ],
+    "status": "RESOURCE_EXHAUSTED"
+  }
+}
+ in /var/www/www-root/data/www/enlightensauna.com/dev/google_docs_domains_checker/vendor/google/apiclient/src/Google/Http/REST.php:118
+Stack trace:
+#0 /var/www/www-root/data/www/enlightensauna.com/dev/google_docs_domains_checker/vendor/google/apiclient/src/Google/Http/REST.php(94): Google_Http_REST::decodeHttpResponse(Object(GuzzleHttp\Psr7\Response), Object(GuzzleHttp\Psr7\Request), 'Google_Service_...')
+#1 /var/www/www-root/data/www/enlightensauna.com/dev/google_docs_domains in /var/www/www-root/data/www/enlightensauna.com/dev/google_docs_domains_checker/vendor/google/apiclient/src/Google/Http/REST.php on line 118

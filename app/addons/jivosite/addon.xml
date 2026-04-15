@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon scheme="2.0">
+    <id>jivosite</id>
+    <name>Jivosite</name>
+    <priority>2300</priority>
+    <position>0</position>
+    <status>active</status>
+    <settings edition_type="ROOT,ULT:VENDOR">
+        <sections>
+            <section id="general">
+                <items>
+                    <item id="widget_id">
+                        <name>Widget id</name>
+                        <type>input</type>
+                    </item>
+                </items>
+            </section>
+        </sections>
+    </settings>
+</addon>

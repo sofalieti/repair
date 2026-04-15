@@ -1,0 +1,7 @@
+# Generate watermarks rules
+<IfModule mod_rewrite.c>
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule .(gif|jpeg|jpg|png)$ /home/content/08/11859608/html//index.php?dispatch=watermark.create [NC]
+</IfModule>
+# /Generate watermarks rules

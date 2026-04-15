@@ -1,0 +1,1 @@
+{script src="app/addons/form_builder/app.js"}

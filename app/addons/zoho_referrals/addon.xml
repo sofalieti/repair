@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon scheme="2.0">
+	<id>zoho_referrals</id>
+	<name>Zoho referrals</name>
+	<priority>2300</priority>
+	<position>0</position>
+	<status>active</status>     
+	<default_language>en</default_language>	
+	<queries>		
+		<item for="install">
+			CREATE TABLE IF NOT EXISTS `?:zoho_referrals` (
+				`referral_id` int(11) NOT NULL AUTO_INCREMENT,
+				`user_id` int(11) NOT NULL,
+				`ip` varchar(20) NOT NULL,
+				PRIMARY KEY (`referral_id`),
+				KEY `user_id` (`user_id`,`ip`)
+			) Engine=MyISAM DEFAULT CHARSET UTF8;
+		</item>
+		<item for="install">
+			CREATE TABLE IF NOT EXISTS `?:zoho_authentications` (
+				`zoho_authentication_id` int(11) NOT NULL AUTO_INCREMENT,
+				`access_token` varchar(100) NOT NULL,
+				`refresh_token` varchar(100) NOT NULL,
+				`created_at` int(11) NOT NULL,
+				`type` varchar(20) NOT NULL,
+				PRIMARY KEY (`zoho_authentication_id`),
+				KEY `type` (`type`)
+			) Engine=MyISAM DEFAULT CHARSET UTF8;
+		</item>
+	</queries>
+	<language_variables>
+		<item lang="en" id="zoho_referrals">Zoho referrals</item>
+	</language_variables>
+</addon>

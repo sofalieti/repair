@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<addon scheme='2.0'>
+    <id>brands</id>
+    <version>1.0</version>
+    <name>Brands</name>
+    <description></description>
+    <priority>100500</priority>
+    <status>active</status>
+    <default_language>ru</default_language>
+    <queries>
+        <item for="install">
+            CREATE TABLE `?:brands` (
+                `brand_id` int(11) NOT NULL,
+                `name` varchar(255) NOT NULL
+            ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+        </item>
+    </queries>
+    <language_variables>
+        <item id="brands" lang="ru">Бренды</item>
+        <item id="brands" lang="en">Brands</item>
+    </language_variables>
+</addon>

@@ -1,0 +1,21 @@
+
+
+{foreach from=$product_features item="feature"}
+{if ($feature.feature_id == 127) || ($feature.feature_id == 128)}
+
+{if $feature.parent_id != 110 }
+{if $feature.value == "Y"}
+    {if $feature.feature_type != "ProductFeatures::GROUP"|enum}
+        <div class="ty-product-feature test" style="float:left">
+		
+		<center style="height:20px;">{$feature.description nofilter}	</center><br>		<center><img class="Round_feature2" src="/images/smallfeatures/featureimagecontent_{$feature.feature_id}_notes.png"> </center>
+		
+
+     
+   
+        </div>
+    {/if}
+	{/if}
+	{/if}
+	{/if}
+{/foreach}

@@ -1,0 +1,140 @@
+Open doc
+Open sheet Categories Domains
+Check domain INFRAREDSAUNAACCESSORIES.COM A2
+Clear background row
+Clear text row
+Check domain INFRAREDSAUNABACKRESTS.COM A3
+Clear background row
+Clear text row
+Check domain INFRAREDSAUNABENCHS.COM A4
+Clear background row
+Clear text row
+Check domain INFRAREDSAUNABLOCKS.COM A5
+Clear background row
+Clear text row
+Check domain INFRAREDSAUNABLOCKS.NET A6
+Clear background row
+Clear text row
+Check domain INFRAREDSAUNABREAKERS.COM A7
+Clear background row
+Clear text row
+Check domain INFRAREDSAUNABREAKERS.NET A8
+Clear background row
+Clear text row
+Check domain INFRAREDSAUNACHROMOTHERAPY.COM A9
+Clear background row
+Clear text row
+Check domain INFRAREDSAUNACLOWN.COM A10
+Clear background row
+Clear text row
+Check domain INFRAREDSAUNACONNETORS.COM A11
+Clear background row
+Clear text row
+Check domain INFRAREDSAUNACOVERS.COM A12
+Clear background row
+Clear text row
+Check domain INFRAREDSAUNADOORHARDWARE.COM A13
+Clear background row
+Clear text row
+Check domain INFRAREDSAUNADOORHARDWARE.NET A14
+Clear background row
+Clear text row
+Check domain INFRAREDSAUNAELEMENTS.COM A15
+Clear background row
+Clear text row
+Check domain INFRAREDSAUNAELEMENTS.NET A16
+Clear background row
+Clear text row
+Check domain INFRAREDSAUNAFANS.COM A17
+Clear background row
+Clear text row
+Check domain INFRAREDSAUNAFLOORS.COM A18
+Clear background row
+Clear text row
+Check domain INFRAREDSAUNAFOUNDATION.NET A19
+Clear background row
+Clear text row
+Check domain INFRAREDSAUNAFUSES.COM A20
+Clear background row
+Clear text row
+Check domain INFRAREDSAUNAFUSES.NET A21
+Clear background row
+Clear text row
+Check domain INFRAREDSAUNAIONIZERS.COM A22
+Clear background row
+Clear text row
+Check domain INFRAREDSAUNAIONIZERS.NET A23
+Clear background row
+Clear text row
+Check domain INFRAREDSAUNALAMPS.COM A24
+Clear background row
+Clear text row
+Check domain INFRAREDSAUNALAMPS.NET A25
+Clear background row
+Clear text row
+Check domain INFRAREDSAUNALEDS.COM A26
+Clear background row
+Clear text row
+Check domain INFRAREDSAUNALEDS.NET A27
+Clear background row
+Clear text row
+Check domain INFRAREDSAUNALIGHTS.COM A28
+Clear background row
+Clear text row
+Check domain INFRAREDSAUNALIGHTS.NET A29
+Clear background row
+Clear text row
+Check domain INFRAREDSAUNAPLAYERS.COM A30
+Clear background row
+Clear text row
+Check domain INFRAREDSAUNAPLAYERS.NET A31
+Clear background row
+Clear text row
+Check domain INFRAREDSAUNAPOWERBOARDS.COM A32
+Clear background row
+Clear text row
+Check domain INFRAREDSAUNAPOWERBOARDS.NET A33
+Clear background row
+Clear text row
+Check domain INFRAREDSAUNARAINCOVER.COM A34
+Clear background row
+Clear text row
+Check domain INFRAREDSAUNARAINCOVER.NET A35
+Clear background row
+Clear text row
+Check domain INFRAREDSAUNARAINCOVERS.COM A36
+Clear background row
+Clear text row
+Check domain INFRAREDSAUNARAINCOVERS.NET A37
+Clear background row
+Clear text row
+Check domain INFRAREDSAUNARELAYS.COM A38
+Clear background row
+Clear text row
+Check domain INFRAREDSAUNARELAYS.NET A39
+Clear background row
+Clear text row
+Check domain INFRAREDSAUNAREMOTECONTROL.COM A40
+Clear background row
+Clear text row
+Check domain INFRAREDSAUNASHELVES.COM A41
+Clear background row
+Clear text row
+Check domain INFRAREDSAUNASWITCHES.COM A42
+Clear background row
+Clear text row
+Check domain INFRAREDSAUNASWITCHES.NET A43
+Clear background row
+Clear text row
+Check domain INFRAREDSAUNATOUCHPADS.COM A44
+Clear background row
+Clear text row
+Check domain INFRAREDSAUNATOUCHPADS.NET A45
+Clear background row
+Clear text row
+Check domain INFRAREDSAUNAWALLS.COM A46
+Clear background row
+Clear text row
+Check domain INFRAREDSAUNAWIRE.COM A47
+Clear background row
+Clear text row

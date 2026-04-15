@@ -1,0 +1,1321 @@
+<?xml version="1.0"?>
+<block_scheme scheme="1.0">
+  <settings>
+    <default_language>en</default_language>
+  </settings>
+  <layout>
+    <name>Main</name>
+    <is_default>1</is_default>
+    <width>16</width>
+    <layout_width>fluid</layout_width>
+    <min_width>280</min_width>
+    <max_width>1200</max_width>
+    <style_id>Multistore</style_id>
+  </layout>
+  <location dispatch="index.index" is_default="0" layout_id="3" object_ids="" custom_html="" position="20" lang_code="en" name="Homepage" title="Outdoor Infrared Saunas" meta_description="Outdoor Infrared Saunas for your garden!" meta_keywords="outdoor infrared saunas.">
+    <containers>
+      <container container_id="805" location_id="202" position="TOP_PANEL" width="16" user_class="" linked_to_default="Y" status="A"/>
+      <container container_id="806" location_id="202" position="HEADER" width="16" user_class="" linked_to_default="Y" status="A"/>
+      <container container_id="807" location_id="202" position="CONTENT" width="16" user_class="content-grid" linked_to_default="Y" status="A">
+        <grid width="4" user_class="side-grid" linked_to_default="Y" status="D" offset="0" omega="1" alpha="1" wrapper="" content_align="FULL_WIDTH" html_element="div" clear="1">
+          <blocks>
+            <block>
+              <type><![CDATA[html_block]]></type>
+              <properties>
+                <template><![CDATA[blocks/html_block.tpl]]></template>
+              </properties>
+              <lang_code><![CDATA[en]]></lang_code>
+              <name><![CDATA[Call us now]]></name>
+              <object_id><![CDATA[0]]></object_id>
+              <object_type><![CDATA[]]></object_type>
+              <content>
+                <content><![CDATA[<p>
+	  Call us now on <strong>0600386535</strong> for our customer support department
+</p>]]></content>
+              </content>
+              <object_ids><![CDATA[]]></object_ids>
+              <wrapper><![CDATA[]]></wrapper>
+              <user_class><![CDATA[call-support]]></user_class>
+              <order><![CDATA[0]]></order>
+              <status><![CDATA[D]]></status>
+              <translations/>
+              <contents/>
+            </block>
+            <block>
+              <type><![CDATA[categories]]></type>
+              <properties>
+                <template><![CDATA[blocks/categories/categories_dropdown_vertical.tpl]]></template>
+                <right_to_left_orientation><![CDATA[N]]></right_to_left_orientation>
+              </properties>
+              <lang_code><![CDATA[en]]></lang_code>
+              <name><![CDATA[Our Products]]></name>
+              <object_id><![CDATA[0]]></object_id>
+              <object_type><![CDATA[]]></object_type>
+              <content>
+                <items>
+                  <filling><![CDATA[full_tree_cat]]></filling>
+                  <parent_category_id><![CDATA[1]]></parent_category_id>
+                  <sort_by><![CDATA[position]]></sort_by>
+                </items>
+              </content>
+              <object_ids><![CDATA[]]></object_ids>
+              <wrapper><![CDATA[blocks/wrappers/sidebox_general.tpl]]></wrapper>
+              <user_class><![CDATA[]]></user_class>
+              <order><![CDATA[4]]></order>
+              <status><![CDATA[D]]></status>
+              <translations/>
+              <contents>
+                <item>
+                  <object_id><![CDATA[0]]></object_id>
+                  <object_type><![CDATA[]]></object_type>
+                  <lang_code><![CDATA[ru]]></lang_code>
+                  <content>
+                    <items>
+                      <filling><![CDATA[full_tree_cat]]></filling>
+                      <parent_element_id><![CDATA[0]]></parent_element_id>
+                    </items>
+                  </content>
+                </item>
+                <item>
+                  <object_id><![CDATA[0]]></object_id>
+                  <object_type><![CDATA[]]></object_type>
+                  <lang_code><![CDATA[zh]]></lang_code>
+                  <content>
+                    <items>
+                      <filling><![CDATA[full_tree_cat]]></filling>
+                      <parent_element_id><![CDATA[0]]></parent_element_id>
+                    </items>
+                  </content>
+                </item>
+              </contents>
+            </block>
+            <block>
+              <type><![CDATA[banners]]></type>
+              <properties>
+                <template><![CDATA[addons/banners/blocks/original.tpl]]></template>
+              </properties>
+              <lang_code><![CDATA[en]]></lang_code>
+              <name><![CDATA[Banner left1]]></name>
+              <object_id><![CDATA[0]]></object_id>
+              <object_type><![CDATA[]]></object_type>
+              <content>
+                <items>
+                  <filling><![CDATA[manually]]></filling>
+                  <item_ids><![CDATA[17]]></item_ids>
+                </items>
+              </content>
+              <object_ids><![CDATA[]]></object_ids>
+              <wrapper><![CDATA[]]></wrapper>
+              <user_class><![CDATA[]]></user_class>
+              <order><![CDATA[6]]></order>
+              <status><![CDATA[D]]></status>
+              <translations/>
+              <contents/>
+            </block>
+          </blocks>
+        </grid>
+        <grid width="16" user_class="OnSale" linked_to_default="Y" status="A" offset="0" omega="1" alpha="1" wrapper="" content_align="FULL_WIDTH" html_element="div" clear="1">
+          <grid width="16" user_class="smallmenu" linked_to_default="Y" status="D" offset="0" omega="1" alpha="1" wrapper="" content_align="FULL_WIDTH" html_element="div" clear="1">
+            <blocks>
+              <block>
+                <type><![CDATA[menu]]></type>
+                <properties>
+                  <template><![CDATA[blocks/menu/dropdown_horizontal.tpl]]></template>
+                  <dropdown_second_level_elements><![CDATA[12]]></dropdown_second_level_elements>
+                  <dropdown_third_level_elements><![CDATA[6]]></dropdown_third_level_elements>
+                </properties>
+                <lang_code><![CDATA[en]]></lang_code>
+                <name><![CDATA[Menu]]></name>
+                <object_id><![CDATA[0]]></object_id>
+                <object_type><![CDATA[]]></object_type>
+                <content>
+                  <menu><![CDATA[3]]></menu>
+                </content>
+                <object_ids><![CDATA[]]></object_ids>
+                <wrapper><![CDATA[]]></wrapper>
+                <user_class><![CDATA[top-menu mainmenu top1menu MobileOnly]]></user_class>
+                <order><![CDATA[0]]></order>
+                <status><![CDATA[A]]></status>
+                <translations/>
+                <contents/>
+              </block>
+              <block>
+                <type><![CDATA[menu]]></type>
+                <properties>
+                  <template><![CDATA[blocks/menu/dropdown_horizontal.tpl]]></template>
+                  <dropdown_second_level_elements><![CDATA[12]]></dropdown_second_level_elements>
+                  <dropdown_third_level_elements><![CDATA[6]]></dropdown_third_level_elements>
+                </properties>
+                <lang_code><![CDATA[en]]></lang_code>
+                <name><![CDATA[MainMenu]]></name>
+                <object_id><![CDATA[0]]></object_id>
+                <object_type><![CDATA[]]></object_type>
+                <content>
+                  <menu><![CDATA[5]]></menu>
+                </content>
+                <object_ids><![CDATA[]]></object_ids>
+                <wrapper><![CDATA[]]></wrapper>
+                <user_class><![CDATA[top-menu mainmenu top1menu NoneMobile]]></user_class>
+                <order><![CDATA[2]]></order>
+                <status><![CDATA[A]]></status>
+                <translations/>
+                <contents/>
+              </block>
+              <block>
+                <type><![CDATA[menu]]></type>
+                <properties>
+                  <template><![CDATA[blocks/menu/dropdown_horizontal.tpl]]></template>
+                  <dropdown_second_level_elements><![CDATA[12]]></dropdown_second_level_elements>
+                  <dropdown_third_level_elements><![CDATA[6]]></dropdown_third_level_elements>
+                </properties>
+                <lang_code><![CDATA[en]]></lang_code>
+                <name><![CDATA[MainMenu2]]></name>
+                <object_id><![CDATA[0]]></object_id>
+                <object_type><![CDATA[]]></object_type>
+                <content>
+                  <menu><![CDATA[4]]></menu>
+                </content>
+                <object_ids><![CDATA[]]></object_ids>
+                <wrapper><![CDATA[]]></wrapper>
+                <user_class><![CDATA[top-menu mainmenu top2menu  NoneMobile]]></user_class>
+                <order><![CDATA[3]]></order>
+                <status><![CDATA[A]]></status>
+                <translations/>
+                <contents/>
+              </block>
+            </blocks>
+          </grid>
+          <grid width="16" user_class="" linked_to_default="Y" status="A" offset="0" omega="1" alpha="1" wrapper="" content_align="FULL_WIDTH" html_element="div" clear="1">
+            <grid width="16" user_class="OnSale" linked_to_default="Y" status="A" offset="0" omega="1" alpha="1" wrapper="" content_align="FULL_WIDTH" html_element="div" clear="1">
+              <blocks>
+                <block>
+                  <type><![CDATA[html_block]]></type>
+                  <properties>
+                    <template><![CDATA[blocks/html_block.tpl]]></template>
+                  </properties>
+                  <lang_code><![CDATA[en]]></lang_code>
+                  <name><![CDATA[Outdoor Banner]]></name>
+                  <object_id><![CDATA[0]]></object_id>
+                  <object_type><![CDATA[]]></object_type>
+                  <content>
+                    <content><![CDATA[<p><img src="http://wellness.infraredsaunaguru.net/images/companies/1/outdoorbanner.jpg?1457598939788"></p>]]></content>
+                  </content>
+                  <object_ids><![CDATA[]]></object_ids>
+                  <wrapper><![CDATA[]]></wrapper>
+                  <user_class><![CDATA[]]></user_class>
+                  <order><![CDATA[0]]></order>
+                  <status><![CDATA[D]]></status>
+                  <translations/>
+                  <contents/>
+                </block>
+                <block>
+                  <type><![CDATA[html_block]]></type>
+                  <properties>
+                    <template><![CDATA[blocks/html_block.tpl]]></template>
+                  </properties>
+                  <lang_code><![CDATA[en]]></lang_code>
+                  <name><![CDATA[PromoBannerTablet Tablet]]></name>
+                  <object_id><![CDATA[0]]></object_id>
+                  <object_type><![CDATA[]]></object_type>
+                  <content>
+                    <content><![CDATA[ ]]></content>
+                  </content>
+                  <object_ids><![CDATA[]]></object_ids>
+                  <wrapper><![CDATA[]]></wrapper>
+                  <user_class><![CDATA[Tablet PromoBanner]]></user_class>
+                  <order><![CDATA[1]]></order>
+                  <status><![CDATA[A]]></status>
+                  <translations/>
+                  <contents/>
+                </block>
+                <block>
+                  <type><![CDATA[template]]></type>
+                  <properties>
+                    <template><![CDATA[blocks/static_templates/subscribe3.tpl]]></template>
+                  </properties>
+                  <lang_code><![CDATA[en]]></lang_code>
+                  <name><![CDATA[OutdoorMainContactForm]]></name>
+                  <object_id><![CDATA[0]]></object_id>
+                  <object_type><![CDATA[]]></object_type>
+                  <content><![CDATA[]]></content>
+                  <object_ids><![CDATA[]]></object_ids>
+                  <wrapper><![CDATA[]]></wrapper>
+                  <user_class><![CDATA[]]></user_class>
+                  <order><![CDATA[2]]></order>
+                  <status><![CDATA[D]]></status>
+                  <translations/>
+                  <contents/>
+                </block>
+                <block>
+                  <type><![CDATA[html_block]]></type>
+                  <properties>
+                    <template><![CDATA[blocks/html_block.tpl]]></template>
+                  </properties>
+                  <lang_code><![CDATA[en]]></lang_code>
+                  <name><![CDATA[Discount banner]]></name>
+                  <object_id><![CDATA[0]]></object_id>
+                  <object_type><![CDATA[]]></object_type>
+                  <content>
+                    <content><![CDATA[ ]]></content>
+                  </content>
+                  <object_ids><![CDATA[]]></object_ids>
+                  <wrapper><![CDATA[]]></wrapper>
+                  <user_class><![CDATA[PromoBanner NoneTablet]]></user_class>
+                  <order><![CDATA[3]]></order>
+                  <status><![CDATA[A]]></status>
+                  <translations/>
+                  <contents/>
+                </block>
+                <block>
+                  <type><![CDATA[html_block]]></type>
+                  <properties>
+                    <template><![CDATA[blocks/html_block.tpl]]></template>
+                  </properties>
+                  <lang_code><![CDATA[en]]></lang_code>
+                  <name><![CDATA[90 Risk]]></name>
+                  <object_id><![CDATA[0]]></object_id>
+                  <object_type><![CDATA[]]></object_type>
+                  <content>
+                    <content><![CDATA[<p><a href="http://outdoorinfraredsauna.com/90-day-risk-free-trial.html"><img rel="" alt="" style="" src="http://outdoorinfraredsauna.com/images/companies/1/Banner.jpg?1468314875980"></a></p>]]></content>
+                  </content>
+                  <object_ids><![CDATA[]]></object_ids>
+                  <wrapper><![CDATA[]]></wrapper>
+                  <user_class><![CDATA[]]></user_class>
+                  <order><![CDATA[4]]></order>
+                  <status><![CDATA[D]]></status>
+                  <translations/>
+                  <contents/>
+                </block>
+                <block>
+                  <type><![CDATA[template]]></type>
+                  <properties>
+                    <template><![CDATA[blocks/static_templates/frontpagebanner.tpl]]></template>
+                  </properties>
+                  <lang_code><![CDATA[en]]></lang_code>
+                  <name><![CDATA[StateBanner]]></name>
+                  <object_id><![CDATA[0]]></object_id>
+                  <object_type><![CDATA[]]></object_type>
+                  <content><![CDATA[]]></content>
+                  <object_ids><![CDATA[]]></object_ids>
+                  <wrapper><![CDATA[]]></wrapper>
+                  <user_class><![CDATA[]]></user_class>
+                  <order><![CDATA[5]]></order>
+                  <status><![CDATA[A]]></status>
+                  <translations/>
+                  <contents/>
+                </block>
+              </blocks>
+            </grid>
+            <grid width="16" user_class="" linked_to_default="Y" status="D" offset="0" omega="1" alpha="1" wrapper="" content_align="FULL_WIDTH" html_element="div" clear="1">
+              <grid width="8" user_class="" linked_to_default="Y" status="A" offset="0" omega="0" alpha="1" wrapper="" content_align="LEFT" html_element="div" clear="0">
+                <blocks>
+                  <block>
+                    <type><![CDATA[html_block]]></type>
+                    <properties>
+                      <template><![CDATA[blocks/html_block.tpl]]></template>
+                    </properties>
+                    <lang_code><![CDATA[en]]></lang_code>
+                    <name><![CDATA[Block Banner]]></name>
+                    <object_id><![CDATA[0]]></object_id>
+                    <object_type><![CDATA[]]></object_type>
+                    <content>
+                      <content><![CDATA[<p>
+	<a href="http://outdoorinfraredsauna.com/90-day-risk-free-trial.html"><img src="http://outdoorinfraredsauna.com/images/companies/1/OUTDOORBanner1.jpg?1470823220065" style="line-height: 1.6em;"></a>
+</p>]]></content>
+                    </content>
+                    <object_ids><![CDATA[]]></object_ids>
+                    <wrapper><![CDATA[]]></wrapper>
+                    <user_class><![CDATA[]]></user_class>
+                    <order><![CDATA[0]]></order>
+                    <status><![CDATA[A]]></status>
+                    <translations/>
+                    <contents/>
+                  </block>
+                </blocks>
+              </grid>
+              <grid width="8" user_class="" linked_to_default="Y" status="A" offset="0" omega="1" alpha="0" wrapper="" content_align="RIGHT" html_element="div" clear="1">
+                <blocks>
+                  <block>
+                    <type><![CDATA[html_block]]></type>
+                    <properties>
+                      <template><![CDATA[blocks/html_block.tpl]]></template>
+                    </properties>
+                    <lang_code><![CDATA[en]]></lang_code>
+                    <name><![CDATA[Block Banner #2]]></name>
+                    <object_id><![CDATA[0]]></object_id>
+                    <object_type><![CDATA[]]></object_type>
+                    <content>
+                      <content><![CDATA[<p>
+	<a href="http://outdoorinfraredsauna.com/our-difference.html"><img src="http://outdoorinfraredsauna.com/images/companies/1/OUTDOORBanner2.jpg?1470823322600" style="line-height: 1.6em;"></a>
+</p>]]></content>
+                    </content>
+                    <object_ids><![CDATA[]]></object_ids>
+                    <wrapper><![CDATA[]]></wrapper>
+                    <user_class><![CDATA[]]></user_class>
+                    <order><![CDATA[0]]></order>
+                    <status><![CDATA[A]]></status>
+                    <translations/>
+                    <contents/>
+                  </block>
+                </blocks>
+              </grid>
+            </grid>
+          </grid>
+          <grid width="16" user_class="MainBlock " linked_to_default="Y" status="A" offset="0" omega="1" alpha="1" wrapper="" content_align="FULL_WIDTH" html_element="div" clear="1">
+            <grid width="16" user_class="" linked_to_default="Y" status="A" offset="0" omega="1" alpha="1" wrapper="" content_align="FULL_WIDTH" html_element="div" clear="1">
+              <blocks>
+                <block>
+                  <type><![CDATA[products]]></type>
+                  <properties>
+                    <template><![CDATA[blocks/products/products_multicolumns.tpl]]></template>
+                    <item_number><![CDATA[N]]></item_number>
+                    <number_of_columns><![CDATA[5]]></number_of_columns>
+                    <hide_add_to_cart_button><![CDATA[Y]]></hide_add_to_cart_button>
+                  </properties>
+                  <lang_code><![CDATA[en]]></lang_code>
+                  <name><![CDATA[Rustic Saunas]]></name>
+                  <object_id><![CDATA[0]]></object_id>
+                  <object_type><![CDATA[]]></object_type>
+                  <content>
+                    <items>
+                      <filling><![CDATA[manually]]></filling>
+                      <item_ids><![CDATA[647,648,650,649,652,659,660,661,662,663]]></item_ids>
+                    </items>
+                  </content>
+                  <object_ids><![CDATA[]]></object_ids>
+                  <wrapper><![CDATA[blocks/wrappers/mainbox_simple.tpl]]></wrapper>
+                  <user_class><![CDATA[homepage-on-sale]]></user_class>
+                  <order><![CDATA[2]]></order>
+                  <status><![CDATA[A]]></status>
+                  <translations/>
+                  <contents/>
+                </block>
+                <block>
+                  <type><![CDATA[products]]></type>
+                  <properties>
+                    <template><![CDATA[blocks/products/products_multicolumns.tpl]]></template>
+                    <item_number><![CDATA[N]]></item_number>
+                    <number_of_columns><![CDATA[5]]></number_of_columns>
+                    <hide_add_to_cart_button><![CDATA[Y]]></hide_add_to_cart_button>
+                  </properties>
+                  <lang_code><![CDATA[en]]></lang_code>
+                  <name><![CDATA[Sierra Saunas]]></name>
+                  <object_id><![CDATA[0]]></object_id>
+                  <object_type><![CDATA[]]></object_type>
+                  <content>
+                    <items>
+                      <filling><![CDATA[manually]]></filling>
+                      <item_ids><![CDATA[4,21,3,22,642,654,655,656,657,658]]></item_ids>
+                    </items>
+                  </content>
+                  <object_ids><![CDATA[]]></object_ids>
+                  <wrapper><![CDATA[blocks/wrappers/mainbox_simple.tpl]]></wrapper>
+                  <user_class><![CDATA[homepage-on-sale]]></user_class>
+                  <order><![CDATA[3]]></order>
+                  <status><![CDATA[A]]></status>
+                  <translations/>
+                  <contents>
+                    <item>
+                      <object_id><![CDATA[0]]></object_id>
+                      <object_type><![CDATA[]]></object_type>
+                      <lang_code><![CDATA[ru]]></lang_code>
+                      <content>
+                        <items>
+                          <filling><![CDATA[on_sale]]></filling>
+                          <limit><![CDATA[8]]></limit>
+                          <cid><![CDATA[]]></cid>
+                        </items>
+                      </content>
+                    </item>
+                    <item>
+                      <object_id><![CDATA[0]]></object_id>
+                      <object_type><![CDATA[]]></object_type>
+                      <lang_code><![CDATA[zh]]></lang_code>
+                      <content>
+                        <items>
+                          <filling><![CDATA[on_sale]]></filling>
+                          <limit><![CDATA[10]]></limit>
+                          <cid><![CDATA[]]></cid>
+                        </items>
+                      </content>
+                    </item>
+                  </contents>
+                </block>
+                <block>
+                  <type><![CDATA[products]]></type>
+                  <properties>
+                    <template><![CDATA[blocks/products/products_multicolumns.tpl]]></template>
+                    <item_number><![CDATA[N]]></item_number>
+                    <number_of_columns><![CDATA[2]]></number_of_columns>
+                    <hide_add_to_cart_button><![CDATA[Y]]></hide_add_to_cart_button>
+                  </properties>
+                  <lang_code><![CDATA[en]]></lang_code>
+                  <name><![CDATA[Clearlight/Jacuzzi]]></name>
+                  <object_id><![CDATA[0]]></object_id>
+                  <object_type><![CDATA[]]></object_type>
+                  <content>
+                    <items>
+                      <filling><![CDATA[manually]]></filling>
+                      <item_ids><![CDATA[646,653]]></item_ids>
+                    </items>
+                  </content>
+                  <object_ids><![CDATA[]]></object_ids>
+                  <wrapper><![CDATA[blocks/wrappers/mainbox_simple.tpl]]></wrapper>
+                  <user_class><![CDATA[homepage-on-sale]]></user_class>
+                  <order><![CDATA[4]]></order>
+                  <status><![CDATA[A]]></status>
+                  <translations/>
+                  <contents/>
+                </block>
+              </blocks>
+            </grid>
+            <blocks>
+              <block>
+                <type><![CDATA[html_block2]]></type>
+                <properties>
+                  <template><![CDATA[blocks/html_block.tpl]]></template>
+                </properties>
+                <lang_code><![CDATA[en]]></lang_code>
+                <name><![CDATA[Test]]></name>
+                <object_id><![CDATA[0]]></object_id>
+                <object_type><![CDATA[]]></object_type>
+                <content>
+                  <content><![CDATA[<p>dsafdsfadsf</p>]]></content>
+                </content>
+                <object_ids><![CDATA[]]></object_ids>
+                <wrapper><![CDATA[blocks/wrappers/footer_general.tpl]]></wrapper>
+                <user_class><![CDATA[]]></user_class>
+                <order><![CDATA[4]]></order>
+                <status><![CDATA[D]]></status>
+                <translations/>
+                <contents/>
+              </block>
+              <block>
+                <type><![CDATA[html_block2]]></type>
+                <properties>
+                  <template><![CDATA[blocks/html_block.tpl]]></template>
+                </properties>
+                <lang_code><![CDATA[en]]></lang_code>
+                <name><![CDATA[test]]></name>
+                <object_id><![CDATA[0]]></object_id>
+                <object_type><![CDATA[]]></object_type>
+                <content>
+                  <content><![CDATA[<p>asdfasdf</p>]]></content>
+                  <content2><![CDATA[<p>fdgfdsgdfgdfgdfgsdf</p>]]></content2>
+                </content>
+                <object_ids><![CDATA[]]></object_ids>
+                <wrapper><![CDATA[blocks/wrappers/mainbox_simple.tpl]]></wrapper>
+                <user_class><![CDATA[]]></user_class>
+                <order><![CDATA[5]]></order>
+                <status><![CDATA[D]]></status>
+                <translations/>
+                <contents/>
+              </block>
+            </blocks>
+          </grid>
+          <grid width="16" user_class="OnSale" linked_to_default="Y" status="A" offset="0" omega="1" alpha="1" wrapper="" content_align="FULL_WIDTH" html_element="div" clear="1">
+            <blocks>
+              <block>
+                <type><![CDATA[smarty_block]]></type>
+                <properties>
+                  <template><![CDATA[blocks/smarty_block.tpl]]></template>
+                </properties>
+                <lang_code><![CDATA[en]]></lang_code>
+                <name><![CDATA[Feature Icons]]></name>
+                <object_id><![CDATA[0]]></object_id>
+                <object_type><![CDATA[]]></object_type>
+                <content>
+                  <content><![CDATA[<div class="ty-wysiwyg-content"><div class="span4">
+	<a href="https://outdoorinfraredsauna.com/sauna-buyers-guide.html">
+	<div>
+		<center>
+		<img src="/images/MStep1.jpg">
+		<h3>Infrared Sauna Buyer's Guide</h3>
+The buyers guide was designe to help you in the process of purchasing your Infrared Sauna.
+		</center>
+	</div>
+	</a>
+</div>
+
+<div class="span4">
+	<a href="https://outdoorinfraredsauna.com/we-ship-worldwide.html.html">
+	<div>
+		<center>
+		<img src="/images/MStep2.jpg">
+		<h3>We ship World Wide!</h3>
+Contact us today and recieve a shipping quote to your destination and save $100s with InfraredSaunaGuru.
+		</center>
+	</div>
+	</a>
+</div>
+
+
+<div class="span4">
+	<a href="https://outdoorinfraredsauna.com/lower-price-garantee.html">
+	<div>
+		<center>
+		<img src="/images/MStep3.jpg">
+		<h3>Low Price Guarantee</h3>
+We'll beat anyone's price... Period. Even up 60 days after you buy!
+		</center>
+	</div>
+	</a>
+</div>
+
+
+<div class="span4">
+	<a href="https://outdoorinfraredsauna.com/financing.html">
+	<div>
+		<center>
+		<img src="/images/MStep4.jpg">
+		<h3>Financing Available</h3>
+Purchase your sauna today and have 12 or more months to pay.
+		</center>
+	</div>
+	</a>
+</div>
+
+
+<div class="span4">
+	<a href="https://outdoorinfraredsauna.com/health-benefits.html">
+	<div>
+		<center>
+		<img src="/images/MStep5.jpg">
+		<h3>Health Benefits</h3>
+Check any Health Benefits information on our site. Feel free to ask questions.
+		</center>
+	</div>
+	</a>
+</div>
+
+
+<div class="span4">
+	<a href="https://outdoorinfraredsauna.com/guru-ultra-carbone.html">
+	<div>
+		<center>
+		<img src="/images/MStep6.jpg">
+		<h3>Guru Ultra Carbon</h3>
+All our saunas use our exclusive ultra carbon high output infrared heaters.
+		</center>
+	</div>
+	</a>
+</div>
+
+
+<div class="span4">
+	<a href="https://outdoorinfraredsauna.com/guru-sauna-diference.html">
+	<div>
+		<center>
+		<img src="/images/MStep7.jpg">
+		<h3>Guru Sauna Difference</h3>
+Infrared Sauna Guru is a world class company providing the highest quality saunas.
+		</center>
+	</div>
+	</a>
+</div>
+
+
+</div>]]></content>
+                </content>
+                <object_ids><![CDATA[]]></object_ids>
+                <wrapper><![CDATA[]]></wrapper>
+                <user_class><![CDATA[MainPageBonuses margin-top margin-bottom]]></user_class>
+                <order><![CDATA[2]]></order>
+                <status><![CDATA[A]]></status>
+                <translations/>
+                <contents/>
+              </block>
+              <block>
+                <type><![CDATA[template]]></type>
+                <properties>
+                  <template><![CDATA[blocks/static_templates/404.tpl]]></template>
+                </properties>
+                <lang_code><![CDATA[en]]></lang_code>
+                <name><![CDATA[404]]></name>
+                <object_id><![CDATA[0]]></object_id>
+                <object_type><![CDATA[]]></object_type>
+                <content><![CDATA[]]></content>
+                <object_ids><![CDATA[]]></object_ids>
+                <wrapper><![CDATA[]]></wrapper>
+                <user_class><![CDATA[]]></user_class>
+                <order><![CDATA[4]]></order>
+                <status><![CDATA[D]]></status>
+                <translations/>
+                <contents/>
+              </block>
+              <block>
+                <type><![CDATA[html_block]]></type>
+                <properties>
+                  <template><![CDATA[blocks/html_block.tpl]]></template>
+                </properties>
+                <lang_code><![CDATA[en]]></lang_code>
+                <name><![CDATA[GuruPromoBanner]]></name>
+                <object_id><![CDATA[0]]></object_id>
+                <object_type><![CDATA[]]></object_type>
+                <content>
+                  <content><![CDATA[<p>
+	<a href="https://indoorinfraredsauna.com"><img src="https://outdoorinfraredsauna.com/images/companies/1/IndoorSaunasBanner.jpg?1516000615354"></a>
+</p>]]></content>
+                </content>
+                <object_ids><![CDATA[]]></object_ids>
+                <wrapper><![CDATA[]]></wrapper>
+                <user_class><![CDATA[PromoBanner NoneTablet]]></user_class>
+                <order><![CDATA[5]]></order>
+                <status><![CDATA[A]]></status>
+                <translations/>
+                <contents/>
+              </block>
+              <block>
+                <type><![CDATA[html_block]]></type>
+                <properties>
+                  <template><![CDATA[blocks/html_block.tpl]]></template>
+                </properties>
+                <lang_code><![CDATA[en]]></lang_code>
+                <name><![CDATA[About Outdoor Infrared Saunas]]></name>
+                <object_id><![CDATA[0]]></object_id>
+                <object_type><![CDATA[]]></object_type>
+                <content>
+                  <content><![CDATA[<div >
+	<p>
+		<img style="float:left;" src="https://outdoorinfraredsauna.com/images/companies/1/scatch.jpg?1509944477310">
+	</p>
+	<p>
+	As an innovator and leader in the infrared sauna industry, OutdoorInfraredSauna by InfraredSaunaGuru has been manufacturing infrared saunas that are both effective and luxurious. We have spent a lot of time studying and researching on infrared therapy to come up with the most effective infrared sauna in the market. Thus, when you buy from us, you can be sure of exceptional quality infrared saunas.
+	</p>
+	<p>
+		<br>
+	</p>
+	<p>
+	Some of our critical goals involve providing classes, self-maintenance, and information tools that are geared toward Life Reorientation so as to empower a lot of people to turn their cumbersome lives around and reclaim the pain-free, flexible and balanced body for a fantastic life. Over the years we have dedicated time, effort and resources on the following aspects of the body; nutrition, health, balance, movement orientation, body mechanics, and flexibility in general.
+	</p>
+	<p>
+		<br>
+	</p>
+	<p>
+	We can cut through the clutter and help you choose the best infrared sauna that is perfect for you. One that will provide a true infrared healing to last a lifetime. Furthermore, within our family of OutdoorInfrared Saunas, you can enjoy features such as; lifetime warranties, awesome add-ons on your sauna designed to meet your needs, Bluetooth &amp; Auxiliary, LED Chromotherapy, patented infrared heaters, and much more. We also have International Partners who make sure the whole process is done in the right way; from the old growth cedar trees to the final crafted products.
+	</p>
+	<p>
+	At, OutdoorInfraredSauna, we are committed to sharing and educating on the benefits of infrared wellness. We take pride in our durable and high-quality infrared Saunas that can be modified to be used either outdoor or indoor in a commercial, clinical, or residential setting. Also, with many years of expertise and knowledge, we know the in-and-outs of infrared saunas, and we can answer any questions about infrared, infrared heaters, types of wood, controls, and infrared saunas in general.
+	</p>
+	<p>
+		<br>
+	</p>
+	<p>
+	We offer quality services to ensure our customers are always 100% satisfied with our products and the entire experience. Some of our notable services include free shipping to selected countries and special warranties. Furthermore, our Saunas come with floor heaters to offer more comfort and prevent moisture build-up. Our infrared heaters are positioned up to avoid direct heating of the head. We also offer infrared therapy which targets your core from every angle, even the front.
+	</p>
+	<p>
+		<br>
+	</p>
+	<p>
+	For quality services and a good customer care support, don't hesitate to give us a call.
+	</p>
+</div>]]></content>
+                </content>
+                <object_ids><![CDATA[]]></object_ids>
+                <wrapper><![CDATA[blocks/wrappers/mainbox_general.tpl]]></wrapper>
+                <user_class><![CDATA[GreyBg100]]></user_class>
+                <order><![CDATA[6]]></order>
+                <status><![CDATA[A]]></status>
+                <translations/>
+                <contents/>
+              </block>
+            </blocks>
+          </grid>
+        </grid>
+        <grid width="16" user_class="" linked_to_default="Y" status="D" offset="0" omega="1" alpha="1" wrapper="" content_align="FULL_WIDTH" html_element="div" clear="1">
+          <grid width="4" user_class="" linked_to_default="Y" status="A" offset="0" omega="1" alpha="0" wrapper="" content_align="FULL_WIDTH" html_element="div" clear="1">
+            <blocks>
+              <block>
+                <type><![CDATA[banners]]></type>
+                <properties>
+                  <template><![CDATA[addons/banners/blocks/original.tpl]]></template>
+                </properties>
+                <lang_code><![CDATA[en]]></lang_code>
+                <name><![CDATA[Bottom Banner 7]]></name>
+                <object_id><![CDATA[0]]></object_id>
+                <object_type><![CDATA[]]></object_type>
+                <content>
+                  <items>
+                    <filling><![CDATA[manually]]></filling>
+                    <item_ids><![CDATA[20]]></item_ids>
+                  </items>
+                </content>
+                <object_ids><![CDATA[]]></object_ids>
+                <wrapper><![CDATA[]]></wrapper>
+                <user_class><![CDATA[]]></user_class>
+                <order><![CDATA[2]]></order>
+                <status><![CDATA[A]]></status>
+                <translations/>
+                <contents/>
+              </block>
+            </blocks>
+          </grid>
+          <grid width="4" user_class="" linked_to_default="Y" status="A" offset="0" omega="0" alpha="0" wrapper="" content_align="FULL_WIDTH" html_element="div" clear="0">
+            <blocks>
+              <block>
+                <type><![CDATA[banners]]></type>
+                <properties>
+                  <template><![CDATA[addons/banners/blocks/original.tpl]]></template>
+                </properties>
+                <lang_code><![CDATA[en]]></lang_code>
+                <name><![CDATA[Bottom banner2]]></name>
+                <object_id><![CDATA[0]]></object_id>
+                <object_type><![CDATA[]]></object_type>
+                <content>
+                  <items>
+                    <filling><![CDATA[manually]]></filling>
+                    <item_ids><![CDATA[15]]></item_ids>
+                  </items>
+                </content>
+                <object_ids><![CDATA[]]></object_ids>
+                <wrapper><![CDATA[]]></wrapper>
+                <user_class><![CDATA[]]></user_class>
+                <order><![CDATA[0]]></order>
+                <status><![CDATA[A]]></status>
+                <translations/>
+                <contents/>
+              </block>
+            </blocks>
+          </grid>
+          <grid width="4" user_class="" linked_to_default="Y" status="A" offset="0" omega="0" alpha="0" wrapper="" content_align="FULL_WIDTH" html_element="div" clear="0">
+            <blocks>
+              <block>
+                <type><![CDATA[banners]]></type>
+                <properties>
+                  <template><![CDATA[addons/banners/blocks/original.tpl]]></template>
+                </properties>
+                <lang_code><![CDATA[en]]></lang_code>
+                <name><![CDATA[Bottom Banner 6]]></name>
+                <object_id><![CDATA[0]]></object_id>
+                <object_type><![CDATA[]]></object_type>
+                <content>
+                  <items>
+                    <filling><![CDATA[manually]]></filling>
+                    <item_ids><![CDATA[19]]></item_ids>
+                  </items>
+                </content>
+                <object_ids><![CDATA[]]></object_ids>
+                <wrapper><![CDATA[]]></wrapper>
+                <user_class><![CDATA[]]></user_class>
+                <order><![CDATA[2]]></order>
+                <status><![CDATA[A]]></status>
+                <translations/>
+                <contents/>
+              </block>
+            </blocks>
+          </grid>
+          <grid width="4" user_class="" linked_to_default="Y" status="A" offset="0" omega="0" alpha="0" wrapper="" content_align="FULL_WIDTH" html_element="div" clear="0">
+            <blocks>
+              <block>
+                <type><![CDATA[banners]]></type>
+                <properties>
+                  <template><![CDATA[addons/banners/blocks/original.tpl]]></template>
+                </properties>
+                <lang_code><![CDATA[en]]></lang_code>
+                <name><![CDATA[Bottom banner 3]]></name>
+                <object_id><![CDATA[0]]></object_id>
+                <object_type><![CDATA[]]></object_type>
+                <content>
+                  <items>
+                    <filling><![CDATA[manually]]></filling>
+                    <item_ids><![CDATA[16]]></item_ids>
+                  </items>
+                </content>
+                <object_ids><![CDATA[]]></object_ids>
+                <wrapper><![CDATA[]]></wrapper>
+                <user_class><![CDATA[]]></user_class>
+                <order><![CDATA[0]]></order>
+                <status><![CDATA[A]]></status>
+                <translations/>
+                <contents/>
+              </block>
+            </blocks>
+          </grid>
+          <grid width="4" user_class="" linked_to_default="Y" status="A" offset="0" omega="1" alpha="0" wrapper="" content_align="FULL_WIDTH" html_element="div" clear="1">
+            <blocks>
+              <block>
+                <type><![CDATA[banners]]></type>
+                <properties>
+                  <template><![CDATA[addons/banners/blocks/original.tpl]]></template>
+                </properties>
+                <lang_code><![CDATA[en]]></lang_code>
+                <name><![CDATA[Bottom banner 4]]></name>
+                <object_id><![CDATA[0]]></object_id>
+                <object_type><![CDATA[]]></object_type>
+                <content>
+                  <items>
+                    <filling><![CDATA[manually]]></filling>
+                    <item_ids><![CDATA[17]]></item_ids>
+                  </items>
+                </content>
+                <object_ids><![CDATA[]]></object_ids>
+                <wrapper><![CDATA[]]></wrapper>
+                <user_class><![CDATA[]]></user_class>
+                <order><![CDATA[0]]></order>
+                <status><![CDATA[A]]></status>
+                <translations/>
+                <contents/>
+              </block>
+            </blocks>
+          </grid>
+          <grid width="4" user_class="" linked_to_default="Y" status="A" offset="0" omega="0" alpha="1" wrapper="" content_align="FULL_WIDTH" html_element="div" clear="0">
+            <blocks>
+              <block>
+                <type><![CDATA[banners]]></type>
+                <properties>
+                  <template><![CDATA[addons/banners/blocks/original.tpl]]></template>
+                </properties>
+                <lang_code><![CDATA[en]]></lang_code>
+                <name><![CDATA[Bottom Banner 8]]></name>
+                <object_id><![CDATA[0]]></object_id>
+                <object_type><![CDATA[]]></object_type>
+                <content>
+                  <items>
+                    <filling><![CDATA[manually]]></filling>
+                    <item_ids><![CDATA[21]]></item_ids>
+                  </items>
+                </content>
+                <object_ids><![CDATA[]]></object_ids>
+                <wrapper><![CDATA[]]></wrapper>
+                <user_class><![CDATA[]]></user_class>
+                <order><![CDATA[2]]></order>
+                <status><![CDATA[A]]></status>
+                <translations/>
+                <contents/>
+              </block>
+            </blocks>
+          </grid>
+          <grid width="4" user_class="" linked_to_default="Y" status="A" offset="0" omega="0" alpha="1" wrapper="" content_align="FULL_WIDTH" html_element="div" clear="0">
+            <blocks>
+              <block>
+                <type><![CDATA[banners]]></type>
+                <properties>
+                  <template><![CDATA[addons/banners/blocks/original.tpl]]></template>
+                </properties>
+                <lang_code><![CDATA[en]]></lang_code>
+                <name><![CDATA[Bottom Banner 5]]></name>
+                <object_id><![CDATA[0]]></object_id>
+                <object_type><![CDATA[]]></object_type>
+                <content>
+                  <items>
+                    <filling><![CDATA[manually]]></filling>
+                    <item_ids><![CDATA[18]]></item_ids>
+                  </items>
+                </content>
+                <object_ids><![CDATA[]]></object_ids>
+                <wrapper><![CDATA[]]></wrapper>
+                <user_class><![CDATA[]]></user_class>
+                <order><![CDATA[2]]></order>
+                <status><![CDATA[A]]></status>
+                <translations/>
+                <contents/>
+              </block>
+            </blocks>
+          </grid>
+          <grid width="4" user_class="" linked_to_default="Y" status="A" offset="0" omega="0" alpha="0" wrapper="" content_align="FULL_WIDTH" html_element="div" clear="0">
+            <blocks>
+              <block>
+                <type><![CDATA[banners]]></type>
+                <properties>
+                  <template><![CDATA[addons/banners/blocks/original.tpl]]></template>
+                </properties>
+                <lang_code><![CDATA[en]]></lang_code>
+                <name><![CDATA[Bottom banner 1]]></name>
+                <object_id><![CDATA[0]]></object_id>
+                <object_type><![CDATA[]]></object_type>
+                <content>
+                  <items>
+                    <filling><![CDATA[manually]]></filling>
+                    <item_ids><![CDATA[14]]></item_ids>
+                  </items>
+                </content>
+                <object_ids><![CDATA[]]></object_ids>
+                <wrapper><![CDATA[]]></wrapper>
+                <user_class><![CDATA[]]></user_class>
+                <order><![CDATA[0]]></order>
+                <status><![CDATA[A]]></status>
+                <translations/>
+                <contents/>
+              </block>
+            </blocks>
+          </grid>
+          <grid width="16" user_class="" linked_to_default="Y" status="A" offset="0" omega="1" alpha="1" wrapper="" content_align="FULL_WIDTH" html_element="div" clear="1"/>
+          <grid width="16" user_class="" linked_to_default="Y" status="A" offset="0" omega="1" alpha="1" wrapper="" content_align="FULL_WIDTH" html_element="div" clear="1">
+            <blocks>
+              <block>
+                <type><![CDATA[banners]]></type>
+                <properties>
+                  <template><![CDATA[addons/banners/blocks/carousel.tpl]]></template>
+                  <navigation><![CDATA[A]]></navigation>
+                  <delay><![CDATA[7]]></delay>
+                </properties>
+                <lang_code><![CDATA[en]]></lang_code>
+                <name><![CDATA[Main banners]]></name>
+                <object_id><![CDATA[0]]></object_id>
+                <object_type><![CDATA[]]></object_type>
+                <content>
+                  <items>
+                    <filling><![CDATA[manually]]></filling>
+                    <item_ids><![CDATA[11,12,22,23,24,25,26,10]]></item_ids>
+                  </items>
+                </content>
+                <object_ids><![CDATA[]]></object_ids>
+                <wrapper><![CDATA[]]></wrapper>
+                <user_class><![CDATA[homepage-banners margin-bottom]]></user_class>
+                <order><![CDATA[0]]></order>
+                <status><![CDATA[D]]></status>
+                <translations/>
+                <contents>
+                  <item>
+                    <object_id><![CDATA[0]]></object_id>
+                    <object_type><![CDATA[]]></object_type>
+                    <lang_code><![CDATA[]]></lang_code>
+                    <content>
+                      <items>
+                        <filling><![CDATA[newest]]></filling>
+                        <period><![CDATA[A]]></period>
+                        <last_days><![CDATA[10]]></last_days>
+                        <limit><![CDATA[3]]></limit>
+                      </items>
+                    </content>
+                  </item>
+                  <item>
+                    <object_id><![CDATA[0]]></object_id>
+                    <object_type><![CDATA[]]></object_type>
+                    <lang_code><![CDATA[ru]]></lang_code>
+                    <content>
+                      <items>
+                        <filling><![CDATA[newest]]></filling>
+                        <period><![CDATA[A]]></period>
+                        <last_days><![CDATA[10]]></last_days>
+                        <limit><![CDATA[3]]></limit>
+                      </items>
+                    </content>
+                  </item>
+                  <item>
+                    <object_id><![CDATA[0]]></object_id>
+                    <object_type><![CDATA[]]></object_type>
+                    <lang_code><![CDATA[zh]]></lang_code>
+                    <content>
+                      <items>
+                        <filling><![CDATA[newest]]></filling>
+                        <period><![CDATA[A]]></period>
+                        <last_days><![CDATA[10]]></last_days>
+                        <limit><![CDATA[3]]></limit>
+                      </items>
+                    </content>
+                  </item>
+                </contents>
+              </block>
+              <block>
+                <type><![CDATA[html_block]]></type>
+                <properties>
+                  <template><![CDATA[blocks/new_my_account.tpl]]></template>
+                </properties>
+                <lang_code><![CDATA[en]]></lang_code>
+                <name><![CDATA[Test]]></name>
+                <object_id><![CDATA[0]]></object_id>
+                <object_type><![CDATA[]]></object_type>
+                <content>
+                  <content><![CDATA[<p>test</p>]]></content>
+                </content>
+                <object_ids><![CDATA[]]></object_ids>
+                <wrapper><![CDATA[]]></wrapper>
+                <user_class><![CDATA[]]></user_class>
+                <order><![CDATA[1]]></order>
+                <status><![CDATA[D]]></status>
+                <translations/>
+                <contents/>
+              </block>
+              <block>
+                <type><![CDATA[html_block]]></type>
+                <properties>
+                  <template><![CDATA[blocks/html_block.tpl]]></template>
+                </properties>
+                <lang_code><![CDATA[en]]></lang_code>
+                <name><![CDATA[Main About Us]]></name>
+                <object_id><![CDATA[0]]></object_id>
+                <object_type><![CDATA[]]></object_type>
+                <content>
+                  <content><![CDATA[<p>
+	<img src="/images/detailed/1/corner-sierra-outdoor-sauna-12.jpg?t=1458560401" style="float:left; width:150px; margin-right: 20px;">Infrared Sauna Guru is a well respected and highly recommended American Sauna Company, owned and operated by sauna specialists. We are dedicated to providing quality affordable products that allow people to improve their lives and/or regain their health. Infrared Sauna Guru provides durable and therapeutic infrared saunas used in homes as well as in clinical and commercial settings.<br>
+	<br>
+		  Our company started years ago as a sauna parts supply business. You can find us online: www.infraredsaunaparts.com. We currently stock and supply infrared heaters, wiring harnesses, controls and other auxiliary parts for over 500 different infrared sauna models. Most of these companies are no longer in business, so we have sourced these parts from the actual heater and electronics manufacturers that these sauna firms used initially. In some cases we have had to redesign and manufacture newer style electronics and heaters for some models, because we found the older components sub-standard. Click here to see the staggering list of infrared sauna companies. We stock and service parts for all infrared sauna brands, so we understand what works and what doesn't. We tend to favor selling parts that work. It makes our job easier. What many companies are trying to represent as quality today is actually not.
+	<br>
+	<br>
+</p>]]></content>
+                </content>
+                <object_ids><![CDATA[]]></object_ids>
+                <wrapper><![CDATA[blocks/wrappers/mainbox_general2.tpl]]></wrapper>
+                <user_class><![CDATA[]]></user_class>
+                <order><![CDATA[4]]></order>
+                <status><![CDATA[D]]></status>
+                <translations/>
+                <contents/>
+              </block>
+              <block>
+                <type><![CDATA[PopupAndSideOut]]></type>
+                <properties>
+                  <template><![CDATA[addons/PopupAndSideOut/blocks/html_block_sideout.tpl]]></template>
+                </properties>
+                <lang_code><![CDATA[en]]></lang_code>
+                <name><![CDATA[Test Block New Template]]></name>
+                <object_id><![CDATA[0]]></object_id>
+                <object_type><![CDATA[]]></object_type>
+                <content>
+                  <PageLink><![CDATA[104]]></PageLink>
+                  <content><![CDATA[<p><img src="https://outdoorinfraredsauna.com/images/companies/1/RequestPricing.png?1499243291412"></p>]]></content>
+                </content>
+                <object_ids><![CDATA[]]></object_ids>
+                <wrapper><![CDATA[blocks/wrappers/mainbox_general.tpl]]></wrapper>
+                <user_class><![CDATA[]]></user_class>
+                <order><![CDATA[6]]></order>
+                <status><![CDATA[D]]></status>
+                <translations/>
+                <contents/>
+              </block>
+              <block>
+                <type><![CDATA[html_block]]></type>
+                <properties>
+                  <template><![CDATA[blocks/html_block.tpl]]></template>
+                </properties>
+                <lang_code><![CDATA[en]]></lang_code>
+                <name><![CDATA[Price Banner]]></name>
+                <object_id><![CDATA[0]]></object_id>
+                <object_type><![CDATA[]]></object_type>
+                <content>
+                  <content><![CDATA[<p>
+	<a href="http://infraredsaunaguru.net/lower-price-garantee.html"><img src="http://infraredsaunaguru.net/images/companies/1/content/guruprice.jpg?1445338001058"></a>
+</p>]]></content>
+                </content>
+                <object_ids><![CDATA[]]></object_ids>
+                <wrapper><![CDATA[]]></wrapper>
+                <user_class><![CDATA[margin-bottom mobile-margin-top]]></user_class>
+                <order><![CDATA[7]]></order>
+                <status><![CDATA[A]]></status>
+                <translations/>
+                <contents/>
+              </block>
+            </blocks>
+          </grid>
+        </grid>
+        <grid width="16" user_class="margin-top margin-bottom" linked_to_default="Y" status="D" offset="0" omega="1" alpha="1" wrapper="" content_align="FULL_WIDTH" html_element="div" clear="1">
+          <blocks>
+            <block>
+              <type><![CDATA[html_block]]></type>
+              <properties>
+                <template><![CDATA[blocks/html_block.tpl]]></template>
+              </properties>
+              <lang_code><![CDATA[en]]></lang_code>
+              <name><![CDATA[MainPageBigBanner Call]]></name>
+              <object_id><![CDATA[0]]></object_id>
+              <object_type><![CDATA[]]></object_type>
+              <content>
+                <content><![CDATA[<p>
+	<a href="/step-by-step.html"><img src="http://infraredsaunaguru.net/images/companies/1/content/BigMainPageBanner.jpg?1439801322943" alt=""></a>
+</p>]]></content>
+              </content>
+              <object_ids><![CDATA[]]></object_ids>
+              <wrapper><![CDATA[]]></wrapper>
+              <user_class><![CDATA[]]></user_class>
+              <order><![CDATA[0]]></order>
+              <status><![CDATA[A]]></status>
+              <translations/>
+              <contents/>
+            </block>
+            <block>
+              <type><![CDATA[products]]></type>
+              <properties>
+                <template><![CDATA[blocks/products/products_multicolumns.tpl]]></template>
+                <item_number><![CDATA[N]]></item_number>
+                <number_of_columns><![CDATA[5]]></number_of_columns>
+                <hide_add_to_cart_button><![CDATA[N]]></hide_add_to_cart_button>
+              </properties>
+              <lang_code><![CDATA[en]]></lang_code>
+              <name><![CDATA[Latest Arrivals]]></name>
+              <object_id><![CDATA[0]]></object_id>
+              <object_type><![CDATA[]]></object_type>
+              <content>
+                <items>
+                  <filling><![CDATA[manually]]></filling>
+                  <item_ids><![CDATA[240,241,244,246,6]]></item_ids>
+                </items>
+              </content>
+              <object_ids><![CDATA[]]></object_ids>
+              <wrapper><![CDATA[blocks/wrappers/mainbox_general.tpl]]></wrapper>
+              <user_class><![CDATA[]]></user_class>
+              <order><![CDATA[2]]></order>
+              <status><![CDATA[D]]></status>
+              <translations/>
+              <contents/>
+            </block>
+          </blocks>
+        </grid>
+        <grid width="16" user_class="main-content-grid" linked_to_default="Y" status="A" offset="0" omega="1" alpha="1" wrapper="" content_align="FULL_WIDTH" html_element="div" clear="1">
+          <grid width="4" user_class="" linked_to_default="Y" status="D" offset="0" omega="1" alpha="1" wrapper="" content_align="FULL_WIDTH" html_element="div" clear="1">
+            <blocks>
+              <block>
+                <type><![CDATA[banners]]></type>
+                <properties>
+                  <template><![CDATA[addons/banners/blocks/original.tpl]]></template>
+                </properties>
+                <lang_code><![CDATA[en]]></lang_code>
+                <name><![CDATA[Banner left2]]></name>
+                <object_id><![CDATA[0]]></object_id>
+                <object_type><![CDATA[]]></object_type>
+                <content>
+                  <items>
+                    <filling><![CDATA[manually]]></filling>
+                    <item_ids><![CDATA[18]]></item_ids>
+                  </items>
+                </content>
+                <object_ids><![CDATA[]]></object_ids>
+                <wrapper><![CDATA[]]></wrapper>
+                <user_class><![CDATA[level]]></user_class>
+                <order><![CDATA[0]]></order>
+                <status><![CDATA[D]]></status>
+                <translations/>
+                <contents/>
+              </block>
+              <block>
+                <type><![CDATA[banners]]></type>
+                <properties>
+                  <template><![CDATA[addons/banners/blocks/original.tpl]]></template>
+                </properties>
+                <lang_code><![CDATA[en]]></lang_code>
+                <name><![CDATA[Banner left3]]></name>
+                <object_id><![CDATA[0]]></object_id>
+                <object_type><![CDATA[]]></object_type>
+                <content>
+                  <items>
+                    <filling><![CDATA[manually]]></filling>
+                    <item_ids><![CDATA[19]]></item_ids>
+                  </items>
+                </content>
+                <object_ids><![CDATA[]]></object_ids>
+                <wrapper><![CDATA[]]></wrapper>
+                <user_class><![CDATA[]]></user_class>
+                <order><![CDATA[0]]></order>
+                <status><![CDATA[D]]></status>
+                <translations/>
+                <contents/>
+              </block>
+            </blocks>
+          </grid>
+          <grid width="16" user_class="" linked_to_default="Y" status="A" offset="0" omega="1" alpha="1" wrapper="" content_align="FULL_WIDTH" html_element="div" clear="1">
+            <blocks>
+              <block>
+                <type><![CDATA[template]]></type>
+                <properties>
+                  <template><![CDATA[blocks/static_templates/subscribe2.tpl]]></template>
+                </properties>
+                <lang_code><![CDATA[en]]></lang_code>
+                <name><![CDATA[Discount coupon]]></name>
+                <object_id><![CDATA[0]]></object_id>
+                <object_type><![CDATA[]]></object_type>
+                <content><![CDATA[]]></content>
+                <object_ids><![CDATA[]]></object_ids>
+                <wrapper><![CDATA[]]></wrapper>
+                <user_class><![CDATA[]]></user_class>
+                <order><![CDATA[0]]></order>
+                <status><![CDATA[D]]></status>
+                <translations/>
+                <contents/>
+              </block>
+              <block>
+                <type><![CDATA[main]]></type>
+                <properties><![CDATA[]]></properties>
+                <lang_code><![CDATA[en]]></lang_code>
+                <name><![CDATA[Main Content]]></name>
+                <object_id><![CDATA[0]]></object_id>
+                <object_type><![CDATA[]]></object_type>
+                <content><![CDATA[]]></content>
+                <object_ids><![CDATA[]]></object_ids>
+                <wrapper><![CDATA[]]></wrapper>
+                <user_class><![CDATA[]]></user_class>
+                <order><![CDATA[2]]></order>
+                <status><![CDATA[A]]></status>
+                <translations/>
+                <contents/>
+              </block>
+            </blocks>
+          </grid>
+          <grid width="8" user_class="" linked_to_default="Y" status="D" offset="0" omega="0" alpha="1" wrapper="" content_align="FULL_WIDTH" html_element="div" clear="0">
+            <blocks>
+              <block>
+                <type><![CDATA[PopupAndSideOut]]></type>
+                <properties>
+                  <template><![CDATA[addons/PopupAndSideOut/blocks/html_block_form.tpl]]></template>
+                </properties>
+                <lang_code><![CDATA[en]]></lang_code>
+                <name><![CDATA[Test]]></name>
+                <object_id><![CDATA[0]]></object_id>
+                <object_type><![CDATA[]]></object_type>
+                <content>
+                  <PageLink><![CDATA[99]]></PageLink>
+                  <content><![CDATA[]]></content>
+                </content>
+                <object_ids><![CDATA[]]></object_ids>
+                <wrapper><![CDATA[]]></wrapper>
+                <user_class><![CDATA[]]></user_class>
+                <order><![CDATA[0]]></order>
+                <status><![CDATA[A]]></status>
+                <translations/>
+                <contents/>
+              </block>
+            </blocks>
+          </grid>
+          <grid width="8" user_class="" linked_to_default="Y" status="D" offset="0" omega="1" alpha="0" wrapper="" content_align="FULL_WIDTH" html_element="div" clear="1">
+            <blocks>
+              <block>
+                <type><![CDATA[PopupAndSideOut]]></type>
+                <properties>
+                  <template><![CDATA[addons/PopupAndSideOut/blocks/html_block_form.tpl]]></template>
+                </properties>
+                <lang_code><![CDATA[en]]></lang_code>
+                <name><![CDATA[2Test]]></name>
+                <object_id><![CDATA[0]]></object_id>
+                <object_type><![CDATA[]]></object_type>
+                <content>
+                  <PageLink><![CDATA[104]]></PageLink>
+                  <content><![CDATA[]]></content>
+                </content>
+                <object_ids><![CDATA[]]></object_ids>
+                <wrapper><![CDATA[]]></wrapper>
+                <user_class><![CDATA[]]></user_class>
+                <order><![CDATA[0]]></order>
+                <status><![CDATA[A]]></status>
+                <translations/>
+                <contents/>
+              </block>
+            </blocks>
+          </grid>
+        </grid>
+        <grid width="16" user_class="" linked_to_default="Y" status="A" offset="0" omega="1" alpha="1" wrapper="" content_align="FULL_WIDTH" html_element="div" clear="1">
+          <blocks>
+            <block>
+              <type><![CDATA[template]]></type>
+              <properties>
+                <template><![CDATA[blocks/static_templates/infusionsoft_form1.tpl]]></template>
+              </properties>
+              <lang_code><![CDATA[en]]></lang_code>
+              <name><![CDATA[Outdoor Infrared Sauna Guide Campaign]]></name>
+              <object_id><![CDATA[0]]></object_id>
+              <object_type><![CDATA[]]></object_type>
+              <content><![CDATA[]]></content>
+              <object_ids><![CDATA[]]></object_ids>
+              <wrapper><![CDATA[]]></wrapper>
+              <user_class><![CDATA[infusionsoft-form infusionsoft-form1]]></user_class>
+              <order><![CDATA[0]]></order>
+              <status><![CDATA[A]]></status>
+              <translations/>
+              <contents/>
+            </block>
+          </blocks>
+        </grid>
+      </container>
+      <container container_id="808" location_id="202" position="FOOTER" width="16" user_class="" linked_to_default="Y" status="A"/>
+    </containers>
+    <translations/>
+  </location>
+</block_scheme>

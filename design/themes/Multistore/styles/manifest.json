@@ -1,0 +1,9 @@
+{
+    "default_style": "multistore",
+    "names": {
+        "multistore": "Multistore"
+    },
+    "default": {
+        "multistore": true
+    }
+}

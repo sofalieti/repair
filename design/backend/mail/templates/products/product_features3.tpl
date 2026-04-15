@@ -1,0 +1,62 @@
+
+
+
+<div >
+<h3 class="SpecificationTitle">Infrared Sauna <span class="RedOption">Optional Upgrade</span> Features</h3>
+{foreach from=$product_features item="feature"}
+
+{if $feature.parent_id == 110 }
+{if $feature.value == "Y"}
+
+
+
+
+    {if $feature.feature_type != "ProductFeatures::GROUP"|enum}
+        <div class="ty-product-feature span3 razdel" style="min-height:200px; float:left">
+		<center><div class="FeatureTitle">{$feature.description nofilter}</div></center>
+      {**  <span class="ty-product-feature__label">{$feature.description nofilter}{if $feature.full_description|trim}{include file="common/help.tpl" text=$feature.description content=$feature.full_description id=$feature.feature_id show_brackets=false link_text="<span class=\"ty-tooltip-block\"><i class=\"ty-icon-help-circle\"></i></span>" wysiwyg=true}{/if}:</span> **}
+
+        {if $feature.feature_type == "ProductFeatures::MULTIPLE_CHECKBOX"|enum}
+            {assign var="hide_affix" value=true}
+        {else}
+            {assign var="hide_affix" value=false}
+        {/if}
+
+        {strip}
+				<center><a href="javascript:void(0)" class="cm-tooltip" title="{$feature.full_description nofilter}"><img class="Round_feature" src="/images/smallfeatures/featureimagecontent_{$feature.feature_id}_notes.png"></a></center>
+        <div class="ty-product-feature__value">
+		
+           {** {if $feature.prefix && !$hide_affix}<span class="ty-product-feature__prefix">{$feature.prefix}</span>{/if}
+            {if $feature.feature_type == "ProductFeatures::SINGLE_CHECKBOX"|enum}
+            <span class="ty-compare-checkbox" title="{$feature.value}">{if $feature.value == "Y"}<i class="ty-compare-checkbox__icon ty-icon-ok"></i>{/if}</span>
+            {elseif $feature.feature_type == "ProductFeatures::DATE"|enum}
+                {$feature.value_int|date_format:"`$settings.Appearance.date_format`"}
+            {elseif $feature.feature_type == "ProductFeatures::MULTIPLE_CHECKBOX"|enum && $feature.variants}
+                <ul class="ty-product-feature__multiple">
+                {foreach from=$feature.variants item="var"}
+                    {assign var="hide_variant_affix" value=!$hide_affix}
+                    {if $var.selected}<li class="ty-product-feature__multiple-item"><span class="ty-compare-checkbox" title="{$var.variant}"><i class="ty-compare-checkbox__icon ty-icon-ok"></i></span>{if !$hide_variant_affix}<span class="ty-product-feature__prefix">{$feature.prefix}</span>{/if}{$var.variant}{if !$hide_variant_affix}<span class="ty-product-feature__suffix">{$feature.suffix}</span>{/if}</li>{/if}
+					
+                {/foreach}
+                </ul>
+            {elseif $feature.feature_type == "ProductFeatures::TEXT_SELECTBOX"|enum || $feature.feature_type == "ProductFeatures::EXTENDED"|enum}
+                {foreach from=$feature.variants item="var"}
+                    {if $var.selected}{$var.variant}{/if}
+                {/foreach}
+            {elseif $feature.feature_type == "ProductFeatures::NUMBER_SELECTBOX"|enum || $feature.feature_type == "ProductFeatures::NUMBER_FIELD"|enum}
+                {$feature.value_int|floatval|default:"-"}
+            {else}
+                {$feature.value|default:"-"}
+            {/if}
+            {if $feature.suffix && !$hide_affix}<span class="ty-product-feature__suffix">{$feature.suffix}</span>{/if}
+			
+			 **}
+        </div>
+        {/strip}
+        </div>
+    {/if}
+	{/if}
+	{/if}
+{/foreach}
+
+</div>

@@ -1,0 +1,1 @@
+{style src="addons/google_recaptcha/styles-addon-icon.less"}

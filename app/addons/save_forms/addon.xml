@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon scheme="2.0">
+	<id>save_forms</id>
+	<name>Save forms</name>
+	<priority>2300</priority>
+	<position>0</position>
+	<status>active</status>
+        <queries>
+            <item>
+                CREATE TABLE IF NOT EXISTS `?:form_data_values` (
+                  `id` int(11) NOT NULL AUTO_INCREMENT,
+                  `form_description_id` int(11) NOT NULL,
+                  `field_name` varchar(255) NOT NULL,
+                  `field_value` varchar(255) NOT NULL,
+                  `form_data_id` int(11) NOT NULL,
+                  PRIMARY KEY (`id`)
+                ) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
+            </item>
+            <item>
+                CREATE TABLE IF NOT EXISTS `?:form_data` (
+                  `id` int(11) NOT NULL AUTO_INCREMENT,
+                  `page_id` int(11) NOT NULL,
+                  `page_name` varchar(255) NOT NULL,
+                  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+                  PRIMARY KEY (`id`)
+                ) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
+            </item>
+            <item>
+                CREATE TABLE IF NOT EXISTS `?:form_data_images` (
+                  `id` int(11) NOT NULL AUTO_INCREMENT,
+                  `name` varchar(255) NOT NULL,
+                  `path` varchar(255) NOT NULL,
+                  `thumb_path` varchar(255) NOT NULL,
+                  `form_data_id` int(11) NOT NULL,
+                  PRIMARY KEY (`id`)
+                ) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
+            </item>
+        </queries>
+	<language_variables>
+		<item lang="EN" id="forms_data">Forms data</item>
+	</language_variables>
+</addon>

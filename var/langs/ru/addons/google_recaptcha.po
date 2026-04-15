@@ -1,0 +1,66 @@
+msgid ""
+msgstr "Project-Id-Version: tygh"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language-Team: Russian\n"
+"Language: ru_RU\n"
+
+msgctxt "Addons::name::google_recaptcha"
+msgid "Cart-Power: Google recaptcha"
+msgstr "Cart-Power: Google recaptcha"
+
+msgctxt "Addons::description::google_recaptcha"
+msgid "Replace default captcha to google recaptcha. Developed by <a target=\"_blank\" href=\"http://cart-power.com/\">Cart-Power</a>. Professional CS-Cart development."
+msgstr "Заменяет стандартную анти-бот проверку на Google reCAPTCHA. Разработан <a target=\"_blank\" href=\"http://cart-power.ru/\">Cart-Power</a>. Профессиональная разработка для CS-Cart."
+
+msgctxt "SettingsSections::google_recaptcha::elm_Settings"
+msgid "Default settings"
+msgstr "Стандартные настройки"
+
+msgctxt "SettingsOptions::google_recaptcha::key"
+msgid "Key"
+msgstr "Ключ"
+
+msgctxt "SettingsOptions::google_recaptcha::secretkey"
+msgid "Secret Key"
+msgstr "Секретный ключ"
+
+msgctxt "SettingsTooltips::google_recaptcha::key"
+msgid "Key (<a target=\"_blank\" href=\"https://www.google.com/recaptcha/intro/index.html\">find on this page</a>)"
+msgstr "Скопируйте ключ с  (<a target=\"_blank\" href=\"https://www.google.com/recaptcha/intro/index.html\">этой страницы</a>)"
+
+msgctxt "SettingsTooltips::google_recaptcha::secretkey"
+msgid "Secret Key (<a target=\"_blank\" href=\"https://www.google.com/recaptcha/intro/index.html\">find on this page</a>)"
+msgstr "Скопируйте секретный ключ с (<a target=\"_blank\" href=\"https://www.google.com/recaptcha/intro/index.html\">этой страницы</a>)"
+
+msgctxt "SettingsOptions::google_recaptcha::type"
+msgid "The type of CAPTCHA to serve"
+msgstr "Выберите тип CAPTCHA"
+
+msgctxt "SettingsVariants::google_recaptcha::type::image"
+msgid "Image"
+msgstr "Изображение"
+
+msgctxt "SettingsVariants::google_recaptcha::type::audio"
+msgid "Audio"
+msgstr "Аудио"
+
+msgctxt "SettingsOptions::google_recaptcha::theme"
+msgid "Theme"
+msgstr "Оформление"
+
+msgctxt "SettingsVariants::google_recaptcha::theme::light"
+msgid "Light"
+msgstr "Светлое"
+
+msgctxt "SettingsVariants::google_recaptcha::theme::dark"
+msgid "Dark"
+msgstr "Темное"
+
+msgctxt "Languages::cp_your_license_is_not_valid"
+msgid "You should enter valid License Key, please contact us (sales@cart-power.com) if you feel any problems"
+msgstr "Необходимо ввести номер лицензии. Свяжитесь с нами (sales@cart-power.com), если у вас возникли какие-либо проблемы"
+
+msgctxt "SettingsOptions::google_recaptcha::licensekey"
+msgid "License key"
+msgstr "Лицензионный ключ"
+
