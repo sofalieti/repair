@@ -500,3 +500,100 @@ function fn_my_changes_get_seo($category = false, $product = false) {
 function fn_get_full_url() {
     return (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 }
+
+/**
+ * Load Zoho spam stopwords from zoho_stopwords.txt (one word/phrase per line).
+ *
+ * @return array
+ */
+function fn_zoho_get_stopwords()
+{
+    static $words = null;
+
+    if ($words !== null) {
+        return $words;
+    }
+
+    $words = array();
+    $path = dirname(__FILE__) . '/zoho_stopwords.txt';
+
+    if (!is_readable($path)) {
+        return $words;
+    }
+
+    $lines = file($path, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+    if (!is_array($lines)) {
+        return $words;
+    }
+
+    foreach ($lines as $line) {
+        $line = trim($line);
+        if ($line === '' || (isset($line[0]) && $line[0] === '#')) {
+            continue;
+        }
+        $words[] = $line;
+    }
+
+    return $words;
+}
+
+/**
+ * Check free text against Zoho stopwords (case-insensitive, whole word/phrase).
+ *
+ * @param mixed $text
+ * @return bool true if a stopword was found
+ */
+function fn_zoho_text_has_stopwords($text)
+{
+    if (!is_scalar($text) || $text === '') {
+        return false;
+    }
+
+    $haystack = mb_strtolower(
+        html_entity_decode(strip_tags((string) $text), ENT_QUOTES, 'UTF-8'),
+        'UTF-8'
+    );
+
+    if ($haystack === '') {
+        return false;
+    }
+
+    foreach (fn_zoho_get_stopwords() as $word) {
+        $needle = mb_strtolower(trim((string) $word), 'UTF-8');
+        if ($needle === '') {
+            continue;
+        }
+
+        // Phrase (contains space): substring match. Single token: word boundary (avoids "indir" in "indirect").
+        if (mb_strpos($needle, ' ') !== false) {
+            if (mb_strpos($haystack, $needle) !== false) {
+                return true;
+            }
+        } elseif (preg_match('/(?<!\p{L})' . preg_quote($needle, '/') . '(?!\p{L})/u', $haystack)) {
+            return true;
+        }
+    }
+
+    return false;
+}
+
+/**
+ * Recursively check Zoho payload (Description, name, MultiLine, etc.) for stopwords.
+ *
+ * @param mixed $payload
+ * @return bool true if spam — do not post to Zoho
+ */
+function fn_zoho_payload_has_stopwords($payload)
+{
+    if (is_array($payload)) {
+        foreach ($payload as $value) {
+            if (fn_zoho_payload_has_stopwords($value)) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    return fn_zoho_text_has_stopwords($payload);
+}

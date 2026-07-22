@@ -272,20 +272,22 @@ function fn_send_form($page_id, $form_values)
 
 		//print_r($zoho_data);exit;
 
-	$request_url = 'https://support.infraredsaunaparts.com/support/WebToCase';
-	$ch = curl_init();
-	  curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, FALSE); 		
-	curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
-	$request_parameters = $zoho_data;
-	curl_setopt($ch, CURLOPT_POST, TRUE);
-	curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($request_parameters));
-	curl_setopt($ch, CURLOPT_HTTPHEADER, array('Accept: application/json'));
-	curl_setopt($ch, CURLOPT_URL, $request_url);
-	curl_setopt($ch, CURLOPT_HEADER, TRUE);
-	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-	$response = curl_exec($ch);
-	$response_info = curl_getinfo($ch);
-	curl_close($ch);
+	if (!fn_zoho_payload_has_stopwords($zoho_data)) {
+		$request_url = 'https://support.infraredsaunaparts.com/support/WebToCase';
+		$ch = curl_init();
+		  curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, FALSE); 		
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
+		$request_parameters = $zoho_data;
+		curl_setopt($ch, CURLOPT_POST, TRUE);
+		curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($request_parameters));
+		curl_setopt($ch, CURLOPT_HTTPHEADER, array('Accept: application/json'));
+		curl_setopt($ch, CURLOPT_URL, $request_url);
+		curl_setopt($ch, CURLOPT_HEADER, TRUE);
+		curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+		$response = curl_exec($ch);
+		$response_info = curl_getinfo($ch);
+		curl_close($ch);
+	}
 
 	/* Here we get the Response Body
 	$response_body = substr($response, $response_info['header_size']);

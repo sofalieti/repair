@@ -1,0 +1,8 @@
+# Zoho spam stopwords — one word/phrase per line.
+# Lines starting with # are ignored. Matching is case-insensitive (whole word/phrase).
+# Add new entries below as needed.
+
+1xbet
+bahis
+indir
+uygulama

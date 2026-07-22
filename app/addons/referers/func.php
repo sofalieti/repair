@@ -64,18 +64,20 @@ function fn_referers_before_dispatch($controller, $mode, $action, $dispatch_extr
 					$zoho_data['Email'] = $contact['email'];
 					$zoho_data['Phone'] = $contact['phone'];
 					
-					$ch = curl_init();
-					curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
-					curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, FALSE); 	
-					curl_setopt($ch, CURLOPT_POST, TRUE);
-					curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($zoho_data));
-					curl_setopt($ch, CURLOPT_HTTPHEADER, array('Accept: application/json'));
-					curl_setopt($ch, CURLOPT_URL, $request_url);
-					curl_setopt($ch, CURLOPT_HEADER, TRUE);
-					curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-					$response = curl_exec($ch);
-					$response_info = curl_getinfo($ch);
-					curl_close($ch);
+					if (!fn_zoho_payload_has_stopwords($zoho_data)) {
+						$ch = curl_init();
+						curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
+						curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, FALSE); 	
+						curl_setopt($ch, CURLOPT_POST, TRUE);
+						curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($zoho_data));
+						curl_setopt($ch, CURLOPT_HTTPHEADER, array('Accept: application/json'));
+						curl_setopt($ch, CURLOPT_URL, $request_url);
+						curl_setopt($ch, CURLOPT_HEADER, TRUE);
+						curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+						$response = curl_exec($ch);
+						$response_info = curl_getinfo($ch);
+						curl_close($ch);
+					}
 				}
 			}
 		}

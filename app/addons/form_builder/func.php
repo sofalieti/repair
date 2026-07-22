@@ -319,7 +319,7 @@ function fn_send_form($page_id, $form_values) {
                 }
             }
 
-            if (!fn_form_builder_is_spam($zoho_data['Description'])) {
+            if (!fn_zoho_payload_has_stopwords($zoho_data) && !fn_form_builder_is_spam($zoho_data['Description'])) {
 
                 //$zoho_data['Description'] .= "<br/><a target='_blank' href='https://enlightensauna.com/index.php?dispatch=infusionsoft.get_contact&secret123=&email={$zoho_data['Email']}'>Stop Email Compaign</a>";
 
@@ -406,6 +406,9 @@ function fn_form_builder_find_links_in_text($text) {
 }
 
 function fn_form_builder_is_spam($text) {
+    if (function_exists('fn_zoho_text_has_stopwords') && fn_zoho_text_has_stopwords($text)) {
+        return true;
+    }
     if (fn_form_builder_find_links_in_text($text)) {
         $find = db_get_row("SELECT * FROM ?:form_spams WHERE ip = ?s AND type = ?s", $_SERVER['REMOTE_ADDR'], 'form_builder_body');
         if (count($find)) {

@@ -85,19 +85,21 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 			$zoho_data['Customer_TimeZone'] = $_REQUEST['contact_us_for_a_price']['timezone'];
 			$zoho_data['Customer_State'] = fn_geo_country_and_state();
 			
-			$ch = curl_init();
-			curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
-                        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, FALSE); 	
-			$request_parameters = $zoho_data;
-			curl_setopt($ch, CURLOPT_POST, TRUE);
-			curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($request_parameters));
-			curl_setopt($ch, CURLOPT_HTTPHEADER, array('Accept: application/json'));
-			curl_setopt($ch, CURLOPT_URL, $request_url);
-			curl_setopt($ch, CURLOPT_HEADER, TRUE);
-			curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-			$response = curl_exec($ch);
-			$response_info = curl_getinfo($ch);
-			curl_close($ch);
+			if (!fn_zoho_payload_has_stopwords($zoho_data)) {
+				$ch = curl_init();
+				curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
+	                        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, FALSE); 	
+				$request_parameters = $zoho_data;
+				curl_setopt($ch, CURLOPT_POST, TRUE);
+				curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($request_parameters));
+				curl_setopt($ch, CURLOPT_HTTPHEADER, array('Accept: application/json'));
+				curl_setopt($ch, CURLOPT_URL, $request_url);
+				curl_setopt($ch, CURLOPT_HEADER, TRUE);
+				curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+				$response = curl_exec($ch);
+				$response_info = curl_getinfo($ch);
+				curl_close($ch);
+			}
 			fn_set_notification('N', __('congratulations'), 'Congratulations! Thank you for your interest one of our sales representatives will contact you shortly..');
 		}
 
@@ -157,19 +159,21 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 				$zoho_data['Email'] = $_REQUEST['product_feedback']['email'];
 				$zoho_data['Phone'] = $_REQUEST['product_feedback']['phone'];
 				
-				$ch = curl_init();
-				curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
-				curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, FALSE); 	
-				$request_parameters = $zoho_data;
-				curl_setopt($ch, CURLOPT_POST, TRUE);
-				curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($request_parameters));
-				curl_setopt($ch, CURLOPT_HTTPHEADER, array('Accept: application/json'));
-				curl_setopt($ch, CURLOPT_URL, $request_url);
-				curl_setopt($ch, CURLOPT_HEADER, TRUE);
-				curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-				$response = curl_exec($ch);
-				$response_info = curl_getinfo($ch);
-				curl_close($ch);
+				if (!fn_zoho_payload_has_stopwords($zoho_data)) {
+					$ch = curl_init();
+					curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
+					curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, FALSE); 	
+					$request_parameters = $zoho_data;
+					curl_setopt($ch, CURLOPT_POST, TRUE);
+					curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($request_parameters));
+					curl_setopt($ch, CURLOPT_HTTPHEADER, array('Accept: application/json'));
+					curl_setopt($ch, CURLOPT_URL, $request_url);
+					curl_setopt($ch, CURLOPT_HEADER, TRUE);
+					curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+					$response = curl_exec($ch);
+					$response_info = curl_getinfo($ch);
+					curl_close($ch);
+				}
 				
 				fn_set_notification('N', __('notice'), 'Congratulations! Thank you for your interest one of our sales representatives will contact you shortly..');
 			}else{

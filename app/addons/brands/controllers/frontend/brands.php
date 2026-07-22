@@ -68,43 +68,45 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $breaks = array("<br />","<br>","<br/>");                  
             $zoho_data['Description'] = strip_tags(str_ireplace($breaks, "\r\n", $zoho_data['Description']));
 
-            $ch = curl_init();
-            curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
-            curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, FALSE);
-            curl_setopt($ch, CURLOPT_POST, TRUE);
-            curl_setopt($ch, CURLOPT_POSTFIELDS, $zoho_data);
-            curl_setopt($ch, CURLOPT_HTTPHEADER, array('Accept: application/json'));
-            curl_setopt($ch, CURLOPT_URL, 'https://desk.zoho.com/support/WebToCase');
-            curl_setopt($ch, CURLOPT_HEADER, TRUE);
-            curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-            $response = curl_exec($ch);
-            $response_info = curl_getinfo($ch);
-            curl_close($ch);
-            
-            $ch = curl_init();
-            curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
-            curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, FALSE);
-            curl_setopt($ch, CURLOPT_POST, TRUE);
-            curl_setopt($ch, CURLOPT_POSTFIELDS, [
-                "zf_referrer_name" => "",
-                "zf_redirect_url" => "",
-                "zc_gad" => "",
-                "SingleLine1" => "Consult {$brand['name']} repairmysauna.com{$fb_page_title_suffix}",
-                "Name_First" => $_REQUEST['name'],
-                "Email" => $_REQUEST['email'],
-                "SingleLine8" => $_REQUEST['phone'],
-                "SingleLine12" => fn_url("categories.view?category_id={$_REQUEST['category_id']}&brand_id={$_REQUEST['brand_id']}"),
-                "MultiLine" => $zoho_data['Description'],
-                "SingleLine6" => $brand['name'],
-                'SingleLine14' => 'RepairMySauna'
-            ]);
-            curl_setopt($ch, CURLOPT_HTTPHEADER, array('Accept: application/json', 'Content-Type:multipart/form-data'));
-            curl_setopt($ch, CURLOPT_URL, "https://forms.zohopublic.com/zohopeople267/form/InfraredSaunaPartsForm/formperma/vXecmwVeDKV9IWNPI9ZORxSzoGRe4TWgIujPS9rF42g/htmlRecords/submit");
-            curl_setopt($ch, CURLOPT_HEADER, TRUE);
-            curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-            $response = curl_exec($ch);
-            $response_info = curl_getinfo($ch);
-            curl_close($ch);
+            if (!fn_zoho_payload_has_stopwords($zoho_data)) {
+                $ch = curl_init();
+                curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
+                curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, FALSE);
+                curl_setopt($ch, CURLOPT_POST, TRUE);
+                curl_setopt($ch, CURLOPT_POSTFIELDS, $zoho_data);
+                curl_setopt($ch, CURLOPT_HTTPHEADER, array('Accept: application/json'));
+                curl_setopt($ch, CURLOPT_URL, 'https://desk.zoho.com/support/WebToCase');
+                curl_setopt($ch, CURLOPT_HEADER, TRUE);
+                curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+                $response = curl_exec($ch);
+                $response_info = curl_getinfo($ch);
+                curl_close($ch);
+                
+                $ch = curl_init();
+                curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
+                curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, FALSE);
+                curl_setopt($ch, CURLOPT_POST, TRUE);
+                curl_setopt($ch, CURLOPT_POSTFIELDS, [
+                    "zf_referrer_name" => "",
+                    "zf_redirect_url" => "",
+                    "zc_gad" => "",
+                    "SingleLine1" => "Consult {$brand['name']} repairmysauna.com{$fb_page_title_suffix}",
+                    "Name_First" => $_REQUEST['name'],
+                    "Email" => $_REQUEST['email'],
+                    "SingleLine8" => $_REQUEST['phone'],
+                    "SingleLine12" => fn_url("categories.view?category_id={$_REQUEST['category_id']}&brand_id={$_REQUEST['brand_id']}"),
+                    "MultiLine" => $zoho_data['Description'],
+                    "SingleLine6" => $brand['name'],
+                    'SingleLine14' => 'RepairMySauna'
+                ]);
+                curl_setopt($ch, CURLOPT_HTTPHEADER, array('Accept: application/json', 'Content-Type:multipart/form-data'));
+                curl_setopt($ch, CURLOPT_URL, "https://forms.zohopublic.com/zohopeople267/form/InfraredSaunaPartsForm/formperma/vXecmwVeDKV9IWNPI9ZORxSzoGRe4TWgIujPS9rF42g/htmlRecords/submit");
+                curl_setopt($ch, CURLOPT_HEADER, TRUE);
+                curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+                $response = curl_exec($ch);
+                $response_info = curl_getinfo($ch);
+                curl_close($ch);
+            }
             
             fn_set_notification('N', __('congratulations'), 'Congratulations! Thank you for your interest one of our sales representatives will contact you shortly..');
         } else {
@@ -167,43 +169,45 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $breaks = array("<br />","<br>","<br/>");                  
             $zoho_data['Description'] = strip_tags(str_ireplace($breaks, "\r\n", $zoho_data['Description']));
 
-            $ch = curl_init();
-            curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
-            curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, FALSE);
-            curl_setopt($ch, CURLOPT_POST, TRUE);
-            curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($zoho_data));
-            curl_setopt($ch, CURLOPT_HTTPHEADER, array('Accept: application/json'));
-            curl_setopt($ch, CURLOPT_URL, 'https://desk.zoho.com/support/WebToCase');
-            curl_setopt($ch, CURLOPT_HEADER, TRUE);
-            curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-            $response = curl_exec($ch);
-            $response_info = curl_getinfo($ch);
-            curl_close($ch);
-            
-            $ch = curl_init();
-            curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
-            curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, FALSE);
-            curl_setopt($ch, CURLOPT_POST, TRUE);
-            curl_setopt($ch, CURLOPT_POSTFIELDS, [
-                "zf_referrer_name" => "",
-                "zf_redirect_url" => "",
-                "zc_gad" => "",
-                "SingleLine1" => "Get a garanteed solution for $95 only repairmysauna.com{$fb_page_title_suffix}",
-                "Name_First" => $_REQUEST['name'],
-                "Email" => $_REQUEST['email'],
-                "SingleLine8" => $_REQUEST['phone'],
-                "SingleLine12" => fn_url("categories.view?category_id={$_REQUEST['category_id']}&brand_id={$_REQUEST['brand_id']}"),
-                "MultiLine" => $zoho_data['Description'],
-                "SingleLine6" => $brand['name'],                
-                'SingleLine14' => 'RepairMySauna'
-            ]);
-            curl_setopt($ch, CURLOPT_HTTPHEADER, array('Accept: application/json', 'Content-Type:multipart/form-data'));
-            curl_setopt($ch, CURLOPT_URL, "https://forms.zohopublic.com/zohopeople267/form/InfraredSaunaPartsForm/formperma/vXecmwVeDKV9IWNPI9ZORxSzoGRe4TWgIujPS9rF42g/htmlRecords/submit");
-            curl_setopt($ch, CURLOPT_HEADER, TRUE);
-            curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-            $response = curl_exec($ch);
-            $response_info = curl_getinfo($ch);
-            curl_close($ch);
+            if (!fn_zoho_payload_has_stopwords($zoho_data)) {
+                $ch = curl_init();
+                curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
+                curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, FALSE);
+                curl_setopt($ch, CURLOPT_POST, TRUE);
+                curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($zoho_data));
+                curl_setopt($ch, CURLOPT_HTTPHEADER, array('Accept: application/json'));
+                curl_setopt($ch, CURLOPT_URL, 'https://desk.zoho.com/support/WebToCase');
+                curl_setopt($ch, CURLOPT_HEADER, TRUE);
+                curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+                $response = curl_exec($ch);
+                $response_info = curl_getinfo($ch);
+                curl_close($ch);
+                
+                $ch = curl_init();
+                curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
+                curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, FALSE);
+                curl_setopt($ch, CURLOPT_POST, TRUE);
+                curl_setopt($ch, CURLOPT_POSTFIELDS, [
+                    "zf_referrer_name" => "",
+                    "zf_redirect_url" => "",
+                    "zc_gad" => "",
+                    "SingleLine1" => "Get a garanteed solution for $95 only repairmysauna.com{$fb_page_title_suffix}",
+                    "Name_First" => $_REQUEST['name'],
+                    "Email" => $_REQUEST['email'],
+                    "SingleLine8" => $_REQUEST['phone'],
+                    "SingleLine12" => fn_url("categories.view?category_id={$_REQUEST['category_id']}&brand_id={$_REQUEST['brand_id']}"),
+                    "MultiLine" => $zoho_data['Description'],
+                    "SingleLine6" => $brand['name'],                
+                    'SingleLine14' => 'RepairMySauna'
+                ]);
+                curl_setopt($ch, CURLOPT_HTTPHEADER, array('Accept: application/json', 'Content-Type:multipart/form-data'));
+                curl_setopt($ch, CURLOPT_URL, "https://forms.zohopublic.com/zohopeople267/form/InfraredSaunaPartsForm/formperma/vXecmwVeDKV9IWNPI9ZORxSzoGRe4TWgIujPS9rF42g/htmlRecords/submit");
+                curl_setopt($ch, CURLOPT_HEADER, TRUE);
+                curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+                $response = curl_exec($ch);
+                $response_info = curl_getinfo($ch);
+                curl_close($ch);
+            }
             
             fn_set_notification('N', __('congratulations'), 'Congratulations! Thank you for your interest one of our sales representatives will contact you shortly..');
         } else {
