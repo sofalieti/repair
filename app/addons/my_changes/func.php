@@ -538,15 +538,36 @@ function fn_zoho_get_stopwords()
 }
 
 /**
- * Check free text against Zoho stopwords (case-insensitive, whole word/phrase).
+ * True if text contains any Cyrillic letter (Russian etc.) — never send to Zoho.
  *
  * @param mixed $text
- * @return bool true if a stopword was found
+ * @return bool
+ */
+function fn_zoho_text_has_cyrillic($text)
+{
+    if (!is_scalar($text) || $text === '') {
+        return false;
+    }
+
+    $plain = html_entity_decode(strip_tags((string) $text), ENT_QUOTES, 'UTF-8');
+
+    return (bool) preg_match('/\p{Cyrillic}/u', $plain);
+}
+
+/**
+ * Check free text for Zoho spam: stopwords or any Cyrillic/Russian text.
+ *
+ * @param mixed $text
+ * @return bool true if spam — do not post to Zoho
  */
 function fn_zoho_text_has_stopwords($text)
 {
     if (!is_scalar($text) || $text === '') {
         return false;
+    }
+
+    if (fn_zoho_text_has_cyrillic($text)) {
+        return true;
     }
 
     $haystack = mb_strtolower(
@@ -578,7 +599,7 @@ function fn_zoho_text_has_stopwords($text)
 }
 
 /**
- * Recursively check Zoho payload (Description, name, MultiLine, etc.) for stopwords.
+ * Recursively check Zoho payload for spam (stopwords or Cyrillic).
  *
  * @param mixed $payload
  * @return bool true if spam — do not post to Zoho

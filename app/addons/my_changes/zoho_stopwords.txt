@@ -1,5 +1,6 @@
 # Zoho spam stopwords — one word/phrase per line.
 # Lines starting with # are ignored. Matching is case-insensitive (whole word/phrase).
+# Any Cyrillic (Russian) text is also blocked in code — always, even without entries here.
 # Add new entries below as needed.
 
 1xbet
